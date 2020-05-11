@@ -1,23 +1,24 @@
+import React from 'react'
 import Link from 'next/link'
 import { makeStyles } from '@material-ui/core/styles' // always this import
+import Navigation from '../components/header.js'
 
 
-const useStyles = makeStyles(theme => ({
-  // just to test
-  paragraph: {
-    color: theme.palette.secondary.main
-  }
-}))
+// const useStyles = makeStyles(theme => ({
+//   // just to test
+//   paragraph: {
+//     color: theme.palette.secondary.main
+//   }
+// }))
 
 const Home = () => {
-  const classes = useStyles()
+//   const classes = useStyles()
 
   return (
     <div>
-      <p className={classes.paragraph}>Homepage</p>
-      <Link href="/contact">
-        <a>Go to contact page</a>
-      </Link>
+
+      {/* <p className={classes.paragraph}>Homepage</p> */}
+      <Navigation></Navigation>
     </div>
   )
 }
