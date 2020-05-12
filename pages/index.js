@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import { makeStyles } from '@material-ui/core/styles' // always this import
-import Navigation from '../components/header.js'
+import Navigation from '../components/Header.js'
+
 
 
 // const useStyles = makeStyles(theme => ({
