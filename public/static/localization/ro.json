@@ -1,3 +1,6 @@
 {
-  "hello": "Salut din Română"
+  "hello": "Salut din Română",
+  "test": {
+    "test": "salut"
+  }
 }

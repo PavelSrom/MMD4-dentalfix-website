@@ -5,7 +5,7 @@ import { useLocalization } from '../utils/hooks'
 
 const Home = () => {
   const { t, lang, changeLang } = useLocalization()
-
+  console.log(t('test'))
   return (
     <Page>
       <p>Homepage</p>
