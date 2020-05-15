@@ -13,10 +13,10 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const Button = () => {
+const Button = ({ children }) => {
   const classes = useStyles()
 
-  return <button className={classes.button}>Appointments</button>
+  return <button className={classes.button}> {children}</button>
 }
 
 export default Button

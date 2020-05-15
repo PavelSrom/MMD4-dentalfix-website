@@ -9,7 +9,8 @@ const useStyles = makeStyles(theme => ({
   },
   navLinks: {
     float: 'right',
-    fontSize: 20
+    fontSize: 20,
+ 
   }
 }))
 
@@ -20,7 +21,8 @@ const Navigation = () => {
     <div className={classes.nav}>
       <img src={logo} alt="" className={classes.logo} />
       <div className={classes.navLinks}>
-        <Link href="/meetUs">
+        <Link    
+        href="/meetUs">
           <a>Meet us</a>
         </Link>
         <Link href="/services">
@@ -32,7 +34,7 @@ const Navigation = () => {
         <Link href="/newPatient">
           <a>New patient</a>
         </Link>
-        <Button></Button>
+        <Button>Appointments</Button>
       </div>
       
     </div>
