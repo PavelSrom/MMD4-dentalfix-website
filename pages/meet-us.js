@@ -1,7 +1,7 @@
 import React from 'react'
 
-const meetUs = () => {
+const MeetUs = () => {
   return <div>Meet us page</div>
 }
 
-export default meetUs
+export default MeetUs

@@ -5,8 +5,8 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../utils/theme'
 
-// import Header from '../components/Header'
-// import Footer from '../components/Footer'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 export default class MyApp extends App {
   componentDidMount() {
@@ -23,17 +23,27 @@ export default class MyApp extends App {
     return (
       <>
         <Head>
+          <link rel="icon" href="/logo_64x64.png" />
           <meta
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width"
           />
+          <meta name="theme-color" content={theme.palette.primary.main} />
         </Head>
         <ThemeProvider theme={theme}>
           <CssBaseline />
-          {/* <Header /> */}
+          <Header />
           <Component {...pageProps} />
-          {/* <Footer /> */}
+          <Footer />
         </ThemeProvider>
+
+        <style jsx global>{`
+          * {
+            box-sizing: 'border-box';
+            margin: 0;
+            padding: 0;
+          }
+        `}</style>
       </>
     )
   }
