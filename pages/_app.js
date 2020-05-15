@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../utils/theme'
+import logo from '../public/logo_64x64.png'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -23,7 +24,7 @@ export default class MyApp extends App {
     return (
       <>
         <Head>
-          <link rel="icon" href="/logo_64x64.png" />
+          <link rel="icon" href={logo} />
           <meta
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width"
