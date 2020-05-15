@@ -13,7 +13,7 @@ const Home = () => {
       <Container background="deepskyblue">
         <p>{t('hello')}</p>
         <button onClick={() => changeLang(lang === 'en' ? 'ro' : 'en')}>
-          change language
+          change lang
         </button>
       </Container>
     </Page>
