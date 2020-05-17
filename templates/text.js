@@ -7,15 +7,15 @@ const useStyles = makeStyles(theme => ({
     textAlign: ({ centered }) => (centered ? 'center' : 'left'),
     color: ({ color }) => (color ? theme.palette[color].main : null),
     fontWeight: ({ bold }) => (bold ? 'bolder' : 400),
-    fontSize: ({ size }) => (size === 'large' ? 64 : 48),
+    fontSize: ({ size }) => (size === 'large' ? 64 : size === 'small' ? 48 : 56),
     [theme.breakpoints.down('sm')]: {
-      fontSize: ({ size }) => (size === 'large' ? 48 : 36)
+      fontSize: ({ size }) => (size === 'large' ? 48 : size === 'small' ? 36 : 42)
     }
   },
   subheadline: {
     textAlign: ({ centered }) => (centered ? 'center' : 'left'),
     color: ({ color }) => (color ? theme.palette[color].main : null),
-    fontWeight: ({ bold }) => (bold ? 'bolder' : 400),
+    fontWeight: ({ bold, light }) => (bold ? 'bolder' : light ? 300 : 400),
     fontSize: 28,
     [theme.breakpoints.down('sm')]: {
       fontSize: 22
@@ -53,8 +53,16 @@ export const Headline = ({
   )
 }
 
-export const Subheadline = ({ bold, color, className, centered, children, ...rest }) => {
-  const classes = useStyles({ bold, color, centered })
+export const Subheadline = ({
+  bold,
+  light,
+  color,
+  className,
+  centered,
+  children,
+  ...rest
+}) => {
+  const classes = useStyles({ bold, light, color, centered })
 
   return (
     <p className={clsx(className, classes.subheadline)} {...rest}>
