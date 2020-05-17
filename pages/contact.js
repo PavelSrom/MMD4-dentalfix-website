@@ -10,15 +10,15 @@ const Contact = () => {
   return (
     <Page>
       <Container>
-        <Headline className={classes.headline}>Your smile starts here!</Headline>
+        <Headline size="small" className={classes.headline}>Your smile starts here!</Headline>
 
         <div className={classes.flex}>
           <div className={classes.info}>
-            <Subheadline className={classes.subheadline}>
+            <BodyText className={classes.bodyText}>
               You deserve the best quality dentistry from a friendly and well prepared
               team. Therefore, DentalFix is equipped to serve you with convenience and
               excellent treatment. We look forward to seeing you!
-            </Subheadline>
+            </BodyText>
 
             {/* icons with information */}
             <div className={classes.row}>
@@ -54,6 +54,7 @@ const Contact = () => {
             />
           </div>
         </div>
+
       </Container>
     </Page>
   )

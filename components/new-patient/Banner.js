@@ -5,7 +5,7 @@ import { ButtonLink } from '../../templates/button'
 
 const Banner = () => (
   <Container background="#fff">
-    <Headline centered>New patient information</Headline>
+    <Headline size="small" centered>New patient information</Headline>
     <Subheadline centered style={{ margin: '16px 0 24px 0' }}>
       Ready to experience the benefits of our personalized & high-tech approach?
       <br />

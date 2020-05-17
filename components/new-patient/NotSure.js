@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core'
 import { Container } from '../../templates/layout'
 import { ButtonLink } from '../../templates/button'
-import { Headline, Subheadline } from '../../templates/text'
+import { Headline, Subheadline, BodyText } from '../../templates/text'
 import img from '../../assets/new-patient__not-sure.jpg'
 
 const useStyles = makeStyles(theme => ({
@@ -45,14 +45,14 @@ const Documents = () => {
           <img src={img} alt="" className={classes.img} />
         </div>
         <div className={clsx(classes.half, classes.right)}>
-          <Headline size="small" style={{ marginBottom: 32 }}>
+          <Subheadline size="small" style={{ marginBottom: 32 }}>
             Still not sure about it?
-          </Headline>
+          </Subheadline>
 
-          <Subheadline light>
+          <BodyText light>
             Don’t hesitate to contact us or check our Frequently asked question page where
             you can find more details and answers to your unclarities.
-          </Subheadline>
+          </BodyText>
 
           <ButtonLink to="/faq" background="primary" size="large" className={classes.cta}>
             Go to FAQ

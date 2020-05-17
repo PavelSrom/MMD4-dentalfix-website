@@ -43,24 +43,24 @@ const Documents = () => {
           <img src={img} alt="" className={classes.img} />
         </div>
         <div className={clsx(classes.half, classes.right)}>
-          <Headline size="small" style={{ marginBottom: 32 }}>
+          <Subheadline size="small" style={{ marginBottom: 32 }}>
             Important documents
-          </Headline>
-
-          <Subheadline light>
-            The important documents that you need to have on your first visit are:
           </Subheadline>
+
+          <BodyText light>
+            The important documents that you need to have on your first visit are:
+          </BodyText>
           <br />
           {items.map(item => (
-            <Subheadline key={item} light>
+            <BodyText key={item} light>
               {item}
-            </Subheadline>
+            </BodyText>
           ))}
           <br />
-          <Subheadline light>
+          <BodyText light>
             After you first visit at DentalFix Clinic, you can become a patient and
             register into our system by creating an account into our new application.
-          </Subheadline>
+          </BodyText>
         </div>
       </div>
     </Container>

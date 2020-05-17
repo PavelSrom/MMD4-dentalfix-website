@@ -4,7 +4,7 @@ export default makeStyles(theme => ({
   headline: {
     marginBottom: theme.spacing(6)
   },
-  subheadline: {
+  bodyText: {
     marginBottom: theme.spacing(4)
   },
   flex: {
@@ -23,7 +23,7 @@ export default makeStyles(theme => ({
     }
   },
   mapContainer: {
-    width: '45%',
+    width: '50%',
     [theme.breakpoints.down('sm')]: {
       width: '100%'
     }
@@ -32,16 +32,16 @@ export default makeStyles(theme => ({
     width: '100%',
     height: '100%',
     minHeight: 480,
-    border: 'none'
+    border: 'none',
   },
   infoIcon: {
-    fontSize: 64,
+    fontSize: 48,
     marginRight: theme.spacing(4),
     [theme.breakpoints.down('sm')]: {
       marginRight: theme.spacing(2),
-      fontSize: 48
+      fontSize: 40
     },
-    color: theme.palette.secondary.main // I thought it would look nice :D
+    color: theme.palette.primary.main // I thought it would look nice :D
   },
   row: {
     display: 'flex',

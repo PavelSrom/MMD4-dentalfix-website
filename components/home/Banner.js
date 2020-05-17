@@ -1,19 +1,30 @@
-import React, { useState } from 'react'
+import React from 'react'
 import useStyles from '../../styles/components/Banner.js'
-import { Typography } from '@material-ui/core'
 import theme from '../../utils/theme'
-import Button from '../../templates/button.js'
+import { Container } from '../../templates/layout'
+import { Headline} from '../../templates/text'
+import { ButtonLink } from '../../templates/button'
 
 const Banner = () => {
   const classes = useStyles()
 
   return (
     <div className={classes.banner}>
-      <Typography className={classes.heading}>
+      <Container>
+      <Headline size="small" className={classes.heading}>
         Brighten any room with your{' '}
         <span style={{ color: theme.palette.primary.main }}>new smile</span>
-      </Typography>
-      <Button className={classes.cta}>Book an appointment</Button>
+      </Headline>
+      <ButtonLink
+      to="https://dentalfix.herokuapp.com"
+      target="_blank"
+      background="secondary"
+      size="large"
+      style={{ display: 'block', margin: '0 auto' }}
+    >
+      Book an appointment
+    </ButtonLink>
+      </Container>
     </div>
   )
 }

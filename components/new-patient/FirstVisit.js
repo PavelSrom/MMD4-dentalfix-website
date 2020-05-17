@@ -38,29 +38,29 @@ const FirstVisit = () => {
     <Container background="#fff">
       <div className={classes.flex}>
         <div className={clsx(classes.half, classes.left)}>
-          <Headline size="small" style={{ marginBottom: 32 }}>
+          <Subheadline size="small" style={{ marginBottom: 32 }}>
             Your first visit: what to expect
-          </Headline>
+          </Subheadline>
 
-          <Subheadline light color="primary">
+          <BodyText light color="primary">
             When you step into our office, our compassionate and friendly team will make
             you feel like home.
-          </Subheadline>
+          </BodyText>
           <br />
-          <Subheadline light>
+          <BodyText light>
             During your visit, we’ll listen to your health concerns and goals, answer any
             questions, and explain all your options.
-          </Subheadline>
+          </BodyText>
           <br />
-          <Subheadline light>
+          <BodyText light>
             You’ll love our friendly, relaxing environment, personable approach, and
             high-tech, minimally invasive techniques.
-          </Subheadline>
+          </BodyText>
           <br />
-          <Subheadline light>
+          <BodyText light>
             Based on the health of your teeth, we’ll decide what type of dental treatment
             is right for you.
-          </Subheadline>
+          </BodyText>
         </div>
         <div className={classes.half}>
           <img src={img} alt="" className={classes.img} />
