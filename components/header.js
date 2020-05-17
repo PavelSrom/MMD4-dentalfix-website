@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { makeStyles } from '@material-ui/core/styles'
 import logo from '../assets/logo_64x64.png'
-import Button from '../templates/button.js'
+import { ButtonLink } from '../templates/button'
 
 const useStyles = makeStyles(theme => ({
   nav: {
@@ -9,8 +9,7 @@ const useStyles = makeStyles(theme => ({
   },
   navLinks: {
     float: 'right',
-    fontSize: 20,
- 
+    fontSize: 20
   }
 }))
 
@@ -21,8 +20,7 @@ const Navigation = () => {
     <div className={classes.nav}>
       <img src={logo} alt="" className={classes.logo} />
       <div className={classes.navLinks}>
-        <Link    
-        href="/meetUs">
+        <Link href="/meetUs">
           <a>Meet us</a>
         </Link>
         <Link href="/services">
@@ -34,9 +32,11 @@ const Navigation = () => {
         <Link href="/newPatient">
           <a>New patient</a>
         </Link>
-        <Button>Appointments</Button>
       </div>
-      
+
+      <ButtonLink to="/contact" background="primary" size="large">
+        Contact
+      </ButtonLink>
     </div>
   )
 }

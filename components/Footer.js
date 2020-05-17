@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from '../templates/layout'
 import { Subheadline, BodyText } from '../templates/text'
-import { Link } from '../templates/button'
+import { Link, LinkWrapper } from '../templates/button'
 import { Schedule, Call, Mail, Room } from '../templates/icons'
 import useStyles from '../styles/components/Footer'
 
@@ -30,12 +30,9 @@ const Footer = () => {
           </div>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <Mail className={classes.icon} />
-            <a
-              href="mailto:dentalfix@gmail.com"
-              style={{ textDecoration: 'none', color: 'inherit' }}
-            >
+            <LinkWrapper href="mailto:dentalfix@gmail.com">
               <BodyText>dentalfix@gmail.com</BodyText>
-            </a>
+            </LinkWrapper>
           </div>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <Room className={classes.icon} />

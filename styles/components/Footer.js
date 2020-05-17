@@ -16,7 +16,7 @@ export default makeStyles(theme => ({
     paddingRight: theme.spacing(2),
     [theme.breakpoints.down('sm')]: {
       width: '100%',
-      maxWidth: 480,
+      maxWidth: 320,
       margin: '0 auto',
       paddingRight: 0,
       marginBottom: theme.spacing(4)
