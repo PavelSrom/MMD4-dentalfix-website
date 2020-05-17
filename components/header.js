@@ -20,7 +20,7 @@ const Navigation = () => {
     <div className={classes.nav}>
       <img src={logo} alt="" className={classes.logo} />
       <div className={classes.navLinks}>
-        <Link href="/meetUs">
+        <Link href="/meet-us">
           <a>Meet us</a>
         </Link>
         <Link href="/services">
@@ -29,7 +29,7 @@ const Navigation = () => {
         <Link href="/contact">
           <a>Contact</a>
         </Link>
-        <Link href="/newPatient">
+        <Link href="/new-patient">
           <a>New patient</a>
         </Link>
       </div>
