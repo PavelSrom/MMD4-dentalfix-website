@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   bodyText: {
     textAlign: ({ centered }) => (centered ? 'center' : 'left'),
     color: ({ color }) => (color ? theme.palette[color].main : null),
-    fontWeight: ({ bold }) => (bold ? 'bolder' : 300),
+    fontWeight: ({ bold, bolder }) => (bold ? 'bolder' : bolder ? 400 : 300),
     fontSize: 20,
     [theme.breakpoints.down('sm')]: {
       fontSize: 18
@@ -63,8 +63,16 @@ export const Subheadline = ({ bold, color, className, centered, children, ...res
   )
 }
 
-export const BodyText = ({ bold, color, className, centered, children, ...rest }) => {
-  const classes = useStyles({ bold, color, centered })
+export const BodyText = ({
+  bold,
+  bolder,
+  color,
+  className,
+  centered,
+  children,
+  ...rest
+}) => {
+  const classes = useStyles({ bold, bolder, color, centered })
 
   return (
     <p className={clsx(className, classes.bodyText)} {...rest}>
