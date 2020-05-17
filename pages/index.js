@@ -1,19 +1,18 @@
 import React from 'react'
 import { Page, Container } from '../templates/layout'
-import { Typography } from '../templates/text'
 import { useLocalization } from '../utils/hooks'
 import Banner from '../components/home/Banner'
 import Offers from '../components/home/Offers'
 
 const Home = () => {
   const { t, lang, changeLang } = useLocalization()
-  console.log(t('test'))
+  console.log(t)
   return (
     <Page>
-      <Banner/>
-      <Offers/>
+      <Banner />
+      <Offers />
       <Container background="deepskyblue">
-        <p>{t('hello')}</p>
+        <p>{t.hello}</p>
         <button onClick={() => changeLang(lang === 'en' ? 'ro' : 'en')}>
           change lang
         </button>

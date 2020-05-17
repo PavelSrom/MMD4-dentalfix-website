@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles'
+import clsx from 'clsx'
 
 const useStyles = makeStyles(theme => ({
   page: {
@@ -16,6 +17,10 @@ const useStyles = makeStyles(theme => ({
       width: '100%',
       padding: `${theme.spacing(4)}px ${theme.spacing(2)}px`
     }
+  },
+  lineLength: {
+    maxWidth: ({ narrow }) => (narrow ? 768 : 960),
+    margin: '0 auto'
   }
 }))
 
@@ -25,12 +30,26 @@ export const Page = ({ children }) => {
   return <main className={classes.page}>{children}</main>
 }
 
-export const Container = ({ children, background }) => {
+export const Container = ({ children, background, className, ...rest }) => {
   const classes = useStyles()
 
   return (
     <section style={{ background }}>
-      <div className={classes.container}>{children}</div>
+      <div className={clsx(className, classes.container)} {...rest}>
+        {children}
+      </div>
     </section>
+  )
+}
+
+// DESC:			simple <div> that restricts line length on large devices
+// USAGE:			whenever you need to ensure ~70 characters line length
+export const LineLength = ({ narrow, className, children, ...rest }) => {
+  const classes = useStyles({ narrow })
+
+  return (
+    <div className={clsx(className, classes.lineLength)} {...rest}>
+      {children}
+    </div>
   )
 }
