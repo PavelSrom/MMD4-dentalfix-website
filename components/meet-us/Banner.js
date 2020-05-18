@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <Container background="#fff">
       <Headline centered>Meet the DentalFix's team</Headline>
-      <Subheadline centered style={{ margin: '16px 0 24px 0' }}>
+      <Subheadline light centered style={{ margin: '16px 0 24px 0' }}>
         Happy to bring you the highest quality dental care.
         <br />
         Get to know us!

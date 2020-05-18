@@ -1,44 +1,113 @@
-import Link from 'next/link'
-import { makeStyles } from '@material-ui/core/styles'
+import React, { useState } from 'react'
+import NextLink from 'next/link'
+import { useRouter } from 'next/router'
 import logo from '../assets/logo_64x64.png'
-import { ButtonLink } from '../templates/button'
+import { ButtonLink, Link, LinkWrapper } from '../templates/button'
+import { BodyText } from '../templates/text'
+import useStyles from '../styles/components/Header'
 
-const useStyles = makeStyles(theme => ({
-  nav: {
-    backgroundColor: '#F2F2F2'
-  },
-  navLinks: {
-    float: 'right',
-    fontSize: 20
-  }
-}))
-
-const Navigation = () => {
+const Header = () => {
   const classes = useStyles()
+  const router = useRouter()
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+
+  const links = [
+    {
+      url: '/meet-us',
+      label: 'Meet us'
+    },
+    {
+      url: '/services',
+      label: 'Services',
+      dropdown: [
+        {
+          url: '/services/general',
+          label: 'General dentistry'
+        },
+        {
+          url: '/services/surgical',
+          label: 'Surgical dentistry'
+        },
+        {
+          url: '/services/cosmetic',
+          label: 'Cosmetic dentistry'
+        }
+      ]
+    },
+    {
+      url: '/new-patient',
+      label: 'New patient'
+    },
+    {
+      url: '/contact',
+      label: 'Contact'
+    }
+  ]
+
+  const buttonToAppointments = (
+    <ButtonLink
+      to="https://dentalfix.herokuapp.com"
+      target="_blank"
+      background="secondary"
+      style={{ marginLeft: 24 }}
+    >
+      Appointments
+    </ButtonLink>
+  )
 
   return (
-    <div className={classes.nav}>
-      <img src={logo} alt="" className={classes.logo} />
-      <div className={classes.navLinks}>
-        <Link href="/meet-us">
-          <a>Meet us</a>
-        </Link>
-        <Link href="/services">
-          <a>Services</a>
-        </Link>
-        <Link href="/contact">
-          <a>Contact</a>
-        </Link>
-        <Link href="/new-patient">
-          <a>New patient</a>
-        </Link>
-      </div>
+    <header className={classes.header}>
+      <NextLink href="/">
+        <LinkWrapper className={classes.logo}>
+          <img src={logo} alt="" className={classes.logo} />
+        </LinkWrapper>
+      </NextLink>
 
-      <ButtonLink to="/contact" background="primary" size="large">
-        Contact
-      </ButtonLink>
-    </div>
+      {/* navigation links */}
+      <nav className={classes.desktopNav}>
+        {links.map(({ url, label, dropdown }) =>
+          dropdown ? (
+            <div style={{ position: 'relative' }}>
+              <BodyText
+                color={router.pathname.startsWith(url) ? 'primary' : null}
+                className={classes.navItemDropdown}
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+              >
+                {label}
+              </BodyText>
+
+              {dropdownOpen && (
+                <div className={classes.dropdownDesktop}>
+                  {dropdown.map(({ url, label }) => (
+                    <Link
+                      to={url}
+                      component={BodyText}
+                      color={router.pathname === url ? 'primary' : null}
+                      onClick={() => setDropdownOpen(false)}
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ) : (
+            <Link
+              to={url}
+              component={BodyText}
+              color={router.pathname.startsWith(url) ? 'primary' : null}
+              className={classes.navItemLink}
+              onClick={() => setDropdownOpen(false)}
+            >
+              {label}
+            </Link>
+          )
+        )}
+
+        {buttonToAppointments}
+      </nav>
+    </header>
   )
 }
 
-export default Navigation
+export default Header

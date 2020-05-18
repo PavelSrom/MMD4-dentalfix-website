@@ -7,25 +7,25 @@ const useStyles = makeStyles(theme => ({
     textAlign: ({ centered }) => (centered ? 'center' : 'left'),
     color: ({ color }) => (color ? theme.palette[color].main : null),
     fontWeight: ({ bold }) => (bold ? 'bolder' : 400),
-    fontSize: ({ size }) => (size === 'large' ? 64 : size === 'small' ? 48 : 56),
+    fontSize: ({ size }) => (size === 'large' ? 56 : size === 'small' ? 40 : 48),
     [theme.breakpoints.down('sm')]: {
-      fontSize: ({ size }) => (size === 'large' ? 48 : size === 'small' ? 36 : 42)
+      fontSize: ({ size }) => (size === 'large' ? 40 : size === 'small' ? 32 : 36)
     }
   },
   subheadline: {
     textAlign: ({ centered }) => (centered ? 'center' : 'left'),
     color: ({ color }) => (color ? theme.palette[color].main : null),
     fontWeight: ({ bold, light }) => (bold ? 'bolder' : light ? 300 : 400),
-    fontSize: 28,
+    fontSize: 32,
     [theme.breakpoints.down('sm')]: {
-      fontSize: 22
+      fontSize: 26
     }
   },
   bodyText: {
     textAlign: ({ centered }) => (centered ? 'center' : 'left'),
     color: ({ color }) => (color ? theme.palette[color].main : null),
     fontWeight: ({ bold, bolder }) => (bold ? 'bolder' : bolder ? 400 : 300),
-    fontSize: 20,
+    fontSize: 22,
     [theme.breakpoints.down('sm')]: {
       fontSize: 18
     }

@@ -72,11 +72,15 @@ export const RoundedButton = ({
   )
 }
 
-export const ButtonLink = ({ to, className, children, ...rest }) => {
+export const ButtonLink = ({ to, className, children, target, ...rest }) => {
   const classes = useStyles()
+
   return (
     <NextLink href={to}>
-      <a style={{ textDecoration: 'none', color: 'inherit' }}>
+      <a
+        style={{ textDecoration: 'none', color: 'inherit' }}
+        target={target ? target : null}
+      >
         <RoundedButton className={clsx(className, classes.roundedButton)} {...rest}>
           {children}
         </RoundedButton>
