@@ -1,7 +1,7 @@
 import React from 'react'
 import useStyles from '../../styles/components/ShortIntro.js'
 import img from '../../assets/shortIntro.jpeg'
-import { BodyText, Subheadline } from '../../templates/text'
+import { BodyText } from '../../templates/text'
 import { Container } from '../../templates/layout'
 import theme from '../../utils/theme'
 

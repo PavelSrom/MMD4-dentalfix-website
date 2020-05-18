@@ -9,7 +9,7 @@ export default makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'row',
     textAlign: 'center',
-    marginTop:'5%'
+    marginTop:'10%'
   },
   icon: {
     width: 100,

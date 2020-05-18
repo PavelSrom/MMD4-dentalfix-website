@@ -45,7 +45,7 @@ const Documents = () => {
           <img src={img} alt="" className={classes.img} />
         </div>
         <div className={clsx(classes.half, classes.right)}>
-          <Subheadline size="small" style={{ marginBottom: 32 }}>
+          <Subheadline bold style={{ marginBottom: 32 }}>
             Still not sure about it?
           </Subheadline>
 

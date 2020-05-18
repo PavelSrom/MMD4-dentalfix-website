@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core'
 import { Container } from '../../templates/layout'
-import { Subheadline } from '../../templates/text'
+import { Subheadline, BodyText } from '../../templates/text'
 import img from '../../assets/meet-us__mission.jpg'
 
 const useStyles = makeStyles(theme => ({
@@ -44,16 +44,16 @@ const Documents = () => {
           <img src={img} alt="" className={classes.img} />
         </div>
         <div className={clsx(classes.half, classes.right)}>
-          <Subheadline light>
+          <BodyText>
             Our mission is to deliver the highest quality care, unprecedented comfort, and
             service.
-          </Subheadline>
+          </BodyText>
           <br />
-          <Subheadline light>
+          <BodyText light>
             We're committed to delivering the very best results for you, whether it is
             creating the perfect smile, reconstructing your entire teeth or helping you
             achieve total wellness.
-          </Subheadline>
+          </BodyText>
         </div>
       </div>
     </Container>

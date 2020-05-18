@@ -50,9 +50,9 @@ const Team = () => {
 
   return (
     <Container background="#fff">
-      <Headline size="small" centered className={classes.headline}>
+      <Subheadline light centered className={classes.headline}>
         Meet our team
-      </Headline>
+      </Subheadline>
 
       <div className={classes.list}>
         {team.map(({ name, area }) => (

@@ -38,7 +38,7 @@ const FirstVisit = () => {
     <Container background="#fff">
       <div className={classes.flex}>
         <div className={clsx(classes.half, classes.left)}>
-          <Subheadline size="small" style={{ marginBottom: 32 }}>
+          <Subheadline bold style={{ marginBottom: 32 }}>
             Your first visit: what to expect
           </Subheadline>
 

@@ -9,7 +9,7 @@ const Reviews = () => {
   return (
     <div className={classes.section}>
       <Container>
-        <Subheadline centered>What our patients say </Subheadline>
+        <Subheadline light centered>What our patients say </Subheadline>
         <div className={classes.all}>
        
         <div className={classes.review2}>

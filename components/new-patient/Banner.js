@@ -1,12 +1,12 @@
 import React from 'react'
 import { Container } from '../../templates/layout'
-import { Headline, Subheadline } from '../../templates/text'
+import { Headline, Subheadline, BodyText } from '../../templates/text'
 import { ButtonLink } from '../../templates/button'
 
 const Banner = () => (
   <Container background="#fff">
-    <Headline size="small" centered>New patient information</Headline>
-    <Subheadline centered style={{ margin: '16px 0 24px 0' }}>
+    <Headline centered>New patient information</Headline>
+    <Subheadline light centered style={{ margin: '16px 0 24px 0' }}>
       Ready to experience the benefits of our personalized & high-tech approach?
       <br />
       DentalFix clinic is accepting new patients.

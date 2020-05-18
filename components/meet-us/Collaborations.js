@@ -8,7 +8,9 @@ const useStyles = makeStyles(theme => ({
     marginBottom: theme.spacing(2)
   },
   subheadline: {
-    marginBottom: theme.spacing(4)
+    marginBottom: theme.spacing(4),
+    width:'80%',
+    margin: '0 auto'
   },
   list: {
     display: 'flex',
@@ -53,9 +55,9 @@ const Collaborations = () => {
 
   return (
     <Container background="#fff">
-      <Headline size="small" centered className={classes.headline}>
+      <Subheadline light centered className={classes.headline}>
         Collaborations
-      </Headline>
+      </Subheadline>
       <LineLength>
         <BodyText centered className={classes.subheadline}>
           Being in strong collaboration with skilled doctors in different areas of

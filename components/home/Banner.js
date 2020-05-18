@@ -11,7 +11,7 @@ const Banner = () => {
   return (
     <div className={classes.banner}>
       <Container>
-      <Headline size="small" className={classes.heading}>
+      <Headline className={classes.heading}>
         Brighten any room with your{' '}
         <span style={{ color: theme.palette.primary.main }}>new smile</span>
       </Headline>
