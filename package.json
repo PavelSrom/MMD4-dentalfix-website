@@ -13,6 +13,7 @@
     "clsx": "^1.1.0",
     "next": "^9.3.5",
     "next-images": "^1.4.0",
+    "next-page-transitions": "^1.0.0-beta.2",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }

@@ -3,6 +3,7 @@ import App from 'next/app'
 import Head from 'next/head'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
+import { PageTransition } from 'next-page-transitions'
 import theme from '../utils/theme'
 import logo from '../public/logo_64x64.png'
 
@@ -19,7 +20,7 @@ export default class MyApp extends App {
   }
 
   render() {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps, router } = this.props
 
     return (
       <>
@@ -34,7 +35,9 @@ export default class MyApp extends App {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Header />
-          <Component {...pageProps} />
+          <PageTransition timeout={350} classNames="page-transition">
+            <Component {...pageProps} key={router.route} />
+          </PageTransition>
           <Footer />
         </ThemeProvider>
 
@@ -47,6 +50,21 @@ export default class MyApp extends App {
           html,
           body {
             background: #fff;
+          }
+
+          .page-transition-enter {
+            opacity: 0;
+          }
+          .page-transition-enter-active {
+            opacity: 1;
+            transition: opacity 350ms;
+          }
+          .page-transition-exit {
+            opacity: 1;
+          }
+          .page-transition-exit-active {
+            opacity: 0;
+            transition: opacity 350ms;
           }
         `}</style>
       </>
