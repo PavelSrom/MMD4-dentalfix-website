@@ -67,7 +67,7 @@ const Header = () => {
       <nav className={classes.desktopNav}>
         {links.map(({ url, label, dropdown }) =>
           dropdown ? (
-            <div style={{ position: 'relative' }}>
+            <div key={url} style={{ position: 'relative' }}>
               <BodyText
                 color={router.pathname.startsWith(url) ? 'primary' : null}
                 className={classes.navItemDropdown}
@@ -94,6 +94,7 @@ const Header = () => {
           ) : (
             <Link
               to={url}
+              key={url}
               component={BodyText}
               color={router.pathname.startsWith(url) ? 'primary' : null}
               className={classes.navItemLink}

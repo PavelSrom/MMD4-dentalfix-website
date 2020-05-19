@@ -40,9 +40,13 @@ export default class MyApp extends App {
 
         <style jsx global>{`
           * {
-            box-sizing: 'border-box';
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+          }
+          html,
+          body {
+            background: #fff;
           }
         `}</style>
       </>
