@@ -3,7 +3,8 @@ import clsx from 'clsx'
 
 const useStyles = makeStyles(theme => ({
   page: {
-    minHeight: 'calc(100vh - 70px)'
+    minHeight: 'calc(100vh - 70px)',
+    background: '#fff'
   },
   container: {
     width: '80%',
