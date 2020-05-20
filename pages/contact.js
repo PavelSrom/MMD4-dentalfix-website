@@ -23,22 +23,22 @@ const Contact = () => {
             {/* icons with information */}
             <div className={classes.row}>
               <Call className={classes.infoIcon} />
-              <BodyText bolder>+400 233 280 111</BodyText>
+              <BodyText >+400 233 280 111</BodyText>
             </div>
 
             <div className={classes.row}>
               <Mail className={classes.infoIcon} />
-              <BodyText bolder>dentalfix@gmail.com</BodyText>
+              <BodyText >dentalfix@gmail.com</BodyText>
             </div>
 
             <div className={classes.row}>
               <Room className={classes.infoIcon} />
-              <BodyText bolder>Street Bunis, nr. 4, Neamt County</BodyText>
+              <BodyText >Street Bunis, nr. 4, Neamt County</BodyText>
             </div>
 
             <div className={classes.row}>
               <Schedule className={classes.infoIcon} />
-              <BodyText bolder>
+              <BodyText >
                 Monday - Friday
                 <br />
                 9:00am - 8:00pm

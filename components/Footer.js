@@ -44,16 +44,28 @@ const Footer = () => {
             </div>
           </div>
           <div className={classes.box}>
-            <Subheadline className={classes.subheadline}>Patient information</Subheadline>
+            <Subheadline className={classes.subheadline}>Quick Links</Subheadline>
             <Link to="/faq" component={BodyText}>
               FAQ
+            </Link>
+            <Link to="/new-patient" component={BodyText}>
+              New patient
+            </Link>
+            <Link to="/services/cosmetic" component={BodyText}>
+              Cosmetic dentistry
+            </Link>
+            <Link to="/services/general" component={BodyText}>
+              General dentistry
+            </Link>
+            <Link to="/services/surgical" component={BodyText}>
+              Surgical dentistry
             </Link>
           </div>
         </Container>
       )}
 
       <div className={classes.copyright}>
-        <BodyText centered>Copyright &copy;2020</BodyText>
+        <BodyText style={{color: 'white'}} centered>Copyright &copy;2020</BodyText>
       </div>
     </footer>
   )

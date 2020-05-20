@@ -10,7 +10,6 @@ export default makeStyles(theme => ({
     }
   },
   box: {
-    width: '33.3%',
     display: 'flex',
     flexDirection: 'column',
     paddingRight: theme.spacing(2),

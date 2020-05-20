@@ -44,6 +44,7 @@ const teethWhitening = () => {
             <Link
               key={url}
               component={Subheadline}
+              light
               to={url}
               className={classes.sidebarLink}
               color={router.pathname === url ? 'primary' : null}
@@ -59,7 +60,7 @@ const teethWhitening = () => {
             <Headline size="small" className={classes.headline}>
               {currentLink.label}
             </Headline>
-            <hr style={{ border: '1px solid #333', marginBottom: 24 }} />
+            <hr style={{ border: '1px solid #f2f2f2',  marginBottom: 24 }} />
 
             <BodyText>
               Are you self-conscious about your smile? If you think that your stained

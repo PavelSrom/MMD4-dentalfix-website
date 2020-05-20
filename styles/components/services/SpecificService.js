@@ -9,7 +9,11 @@ export default makeStyles(theme => ({
     width: '25%',
     [theme.breakpoints.down('sm')]: {
       display: 'none'
-    }
+    },
+    marginTop: '7%'
+  },
+  sidebarLink: {
+    marginBottom:10
   },
   content: {
     width: '75%',
@@ -18,7 +22,7 @@ export default makeStyles(theme => ({
     }
   },
   headline: {
-    marginBottom: theme.spacing(4)
+    marginBottom: theme.spacing(4),
   },
   buttonLink: {
     marginTop: theme.spacing(4)

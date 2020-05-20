@@ -26,7 +26,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('md')]: {
       paddingLeft: 0,
       marginTop: theme.spacing(2)
-    }
+    },
+    
+    
   },
   img: {
     maxWidth: '100%',
@@ -49,10 +51,16 @@ const Documents = () => {
             service.
           </BodyText>
           <br />
-          <BodyText light>
+          <BodyText>
             We're committed to delivering the very best results for you, whether it is
             creating the perfect smile, reconstructing your entire teeth or helping you
             achieve total wellness.
+          </BodyText>
+          <br />
+          <BodyText>
+            At DentalFix, we grant the satisfying services with reliable and modern
+            equipment. Our team is keen about using new, modern and adequate method,
+            provided with high quality dentistry skills.
           </BodyText>
         </div>
       </div>

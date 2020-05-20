@@ -12,7 +12,7 @@ export default makeStyles(theme => ({
     width: '50%',
     minWidth: 288,
     margin: `${theme.spacing(6)}px auto 0 auto`,
-    border: '2px solid #f2f2f2'
+    border: '1px solid #f2f2f2'
   },
   serviceBox: {
     display: 'flex',
