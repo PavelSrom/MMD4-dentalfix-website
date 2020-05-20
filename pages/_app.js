@@ -51,6 +51,15 @@ export default class MyApp extends App {
           body {
             background: #fff;
           }
+          p,
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            line-height: 1.5;
+          }
 
           .page-transition-enter {
             opacity: 0;

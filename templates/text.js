@@ -10,9 +10,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: ({ size }) => (size === 'large' ? 40 : size === 'small' ? 32 : 36),
     [theme.breakpoints.down('sm')]: {
       fontSize: ({ size }) => (size === 'large' ? 32 : size === 'small' ? 24 : 28)
-    },
-    lineHeight: 1.5,
-    color: '#3c3c3c'
+    }
   },
   subheadline: {
     textAlign: ({ centered }) => (centered ? 'center' : 'left'),
@@ -21,9 +19,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: 24,
     [theme.breakpoints.down('sm')]: {
       fontSize: 22
-    },
-    lineHeight: 1.5,
-    color: '#3c3c3c'
+    }
   },
   bodyText: {
     textAlign: ({ centered }) => (centered ? 'center' : 'left'),
@@ -32,9 +28,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: 18,
     [theme.breakpoints.down('sm')]: {
       fontSize: 16
-    },
-    lineHeight: 1.5,
-    color: '#3c3c3c'
+    }
   }
 }))
 
