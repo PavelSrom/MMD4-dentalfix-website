@@ -29,6 +29,10 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       fontSize: 16
     }
+  },
+  span: {
+    fontWeight: ({ bold, bolder }) => (bold ? 'bold' : bolder ? 'bolder' : null),
+    color: ({ blue }) => (blue ? theme.palette.primary.main : null)
   }
 }))
 
@@ -87,4 +91,10 @@ export const BodyText = ({
       {children}
     </p>
   )
+}
+
+export const Span = ({ bold, bolder, blue, children }) => {
+  const classes = useStyles({ bold, bolder, blue })
+
+  return <span className={classes.span}>{children}</span>
 }
