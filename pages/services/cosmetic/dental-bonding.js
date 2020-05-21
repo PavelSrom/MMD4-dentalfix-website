@@ -57,13 +57,8 @@ const dentalBonding = () => {
         {/* page content */}
         <div className={classes.content}>
           <LineLength narrow>
-<<<<<<< HEAD
             <Headline size="small" bold className={classes.headline}>
-              {currentLink.label}
-=======
-            <Headline size="small" className={classes.headline}>
               {currentLink && currentLink.label}
->>>>>>> 09d635d0de6a813d3ceecdef6fb321f37f2b1d1d
             </Headline>
             <hr style={{ border: '1px solid #f2f2f2', marginBottom: 24 }} />
 
