@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles'
+import { motion } from 'framer-motion'
 import clsx from 'clsx'
 
 const useStyles = makeStyles(theme => ({
@@ -28,7 +29,16 @@ const useStyles = makeStyles(theme => ({
 export const Page = ({ children }) => {
   const classes = useStyles()
 
-  return <main className={classes.page}>{children}</main>
+  return (
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={classes.page}
+    >
+      {children}
+    </motion.main>
+  )
 }
 
 export const Container = ({ children, background, className, ...rest }) => {

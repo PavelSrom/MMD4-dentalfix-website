@@ -58,7 +58,7 @@ const dentalBonding = () => {
         <div className={classes.content}>
           <LineLength narrow>
             <Headline size="small" className={classes.headline}>
-              {currentLink.label}
+              {currentLink && currentLink.label}
             </Headline>
             <hr style={{ border: '1px solid #f2f2f2', marginBottom: 24 }} />
 
