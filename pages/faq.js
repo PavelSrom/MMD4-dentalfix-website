@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Page, Container, LineLength } from '../templates/layout'
-import { Headline, BodyText } from '../templates/text'
+import { Headline } from '../templates/text'
 import useStyles from '../styles/pages/faq'
 import { useLocalization } from '../utils/hooks'
+import Accordion from '../components/faq/Accordion'
 
 const faq = () => {
   const classes = useStyles()
   const { t } = useLocalization('FAQ')
+  const [expanded, setExpanded] = useState(false)
 
   const questions = [
     {
@@ -49,13 +51,16 @@ const faq = () => {
             DentalFix clinic FAQ
           </Headline>
 
-          {questions.map(({ question, answer }) => (
-            <div key={question} className={classes.questionBox}>
+          {questions.map(({ question, answer }, index) => (
+            <div key={question}>
               <div className={classes.border} />
-              <BodyText bold className={classes.question}>
-                {question}
-              </BodyText>
-              <BodyText>{answer}</BodyText>
+              <Accordion
+                question={question}
+                answer={answer}
+                expanded={expanded}
+                setExpanded={setExpanded}
+                index={index}
+              />
             </div>
           ))}
         </LineLength>
