@@ -3,7 +3,7 @@ import banner from '../../assets/bannerHome.jpg'
 
 export default makeStyles(theme => ({
   banner: {
-    minHeight: 500,
+    minHeight: 450,
     backgroundImage: `url(${banner})`,
     backgroundSize: 'cover',
     backgroundPosition: '70% 50%',
@@ -35,7 +35,7 @@ export default makeStyles(theme => ({
     }
   },
   heading: {
-    marginBottom: theme.spacing(8),
+    marginBottom: theme.spacing(5),
     [theme.breakpoints.down('xs')]: {
       textAlign: 'center'
     }

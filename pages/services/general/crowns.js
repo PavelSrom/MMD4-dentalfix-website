@@ -63,9 +63,9 @@ const crowns = () => {
         <div className={classes.content}>
           <LineLength narrow>
             <Headline size="small" bold className={classes.headline}>
-            {currentLink && currentLink.label}
+              {currentLink && currentLink.label}
             </Headline>
-            <hr style={{ border: '1px solid #f2f2f2', marginBottom: 24 }} />
+            <hr style={{ border: '1px solid #dadada', marginBottom: 24 }} />
 
             <BodyText>
               Smiling with broken tooth can lead to a decrease in our self-confidence.
@@ -84,13 +84,24 @@ const crowns = () => {
             <BodyText>- Last for a long time</BodyText>
             <br />
             <BodyText>
-              At DentalFix, we are equipped with only quality tools which will make sure
-              that the dental process is painless and effective. If you think that you
-              need a dental crown, or any other treatment, give us a call or make an
-              appointment. For the doctors at DentalFix clinic, crowns need to have
-              strength and longevity, which is why we devote the utmost attention to
-              detail on all of our dental work. Your crown will be secure, natural in
-              appearance and structurally intact.
+              At{' '}
+              <a style={{ textDecoration: 'none' }} href="/">
+                <Span blue border>
+                  DentalFix Clinic
+                </Span>
+              </a>
+              , we are equipped with only quality tools which will make sure that the
+              dental process is painless and effective. If you think that you need a
+              dental crown, or any other treatment, give us a call or make an appointment.
+              For{' '}
+              <a style={{ textDecoration: 'none' }} href="/Meet-us">
+                <Span blue border>
+                  the dentists at DentalFix Clinic
+                </Span>
+              </a>
+              , crowns need to have strength and longevity, which is why we devote the
+              utmost attention to detail on all of our dental work. Your crown will be
+              secure, natural in appearance and structurally intact.
             </BodyText>
 
             <LinkWrapper href="https://dentalfix.herokuapp.com" target="_blank">

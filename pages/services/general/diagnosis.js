@@ -63,9 +63,9 @@ const diagnosis = () => {
         <div className={classes.content}>
           <LineLength narrow>
             <Headline size="small" bold className={classes.headline}>
-            {currentLink && currentLink.label}
+              {currentLink && currentLink.label}
             </Headline>
-            <hr style={{ border: '1px solid #f2f2f2', marginBottom: 24 }} />
+            <hr style={{ border: '1px solid #dadada', marginBottom: 24 }} />
 
             <BodyText>
               Tooth pain can be unpleasant and sometimes difficult to bear. Sometimes the
@@ -73,17 +73,27 @@ const diagnosis = () => {
             </BodyText>
             <br />
             <BodyText>
-              Our skilled dentists will provide you with quality diagnosis and explanation
-              of the what is causing the pain. After the complete examination, they will
-              advise the further process of treatment and it’s fully up to you what you
-              choose.
+              <a style={{ textDecoration: 'none' }} href="/Meet-us">
+                <Span blue border>
+                  Our skilled dentists
+                </Span>
+              </a>{' '}
+              will provide you with quality diagnosis and explanation of the what is
+              causing the pain. After the complete examination, they will advise the
+              further process of treatment and it’s fully up to you what you choose.
             </BodyText>
             <br />
             <BodyText>
-              At DentalFix, we provide only quality dental diagnosis with professional
-              attitude. According to the level of tooth damage, you will be next advised
-              with another check-ups. Take into consideration that you should visit us at
-              least once a year for regular check-up. We recommend coming twice a year for
+              At{' '}
+              <a style={{ textDecoration: 'none' }} href="/">
+                <Span blue border>
+                  DentalFix Clinic
+                </Span>
+              </a>
+              , we provide only quality dental diagnosis with professional attitude.
+              According to the level of tooth damage, you will be next advised with
+              another check-ups. Take into consideration that you should visit us at least
+              once a year for regular check-up. We recommend coming twice a year for
               check-up and cleaning.
             </BodyText>
             <br />

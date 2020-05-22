@@ -63,15 +63,21 @@ const fillings = () => {
         <div className={classes.content}>
           <LineLength narrow>
             <Headline size="small" bold className={classes.headline}>
-            {currentLink && currentLink.label}
+              {currentLink && currentLink.label}
             </Headline>
-            <hr style={{ border: '1px solid #f2f2f2', marginBottom: 24 }} />
+            <hr style={{ border: '1px solid #dadada', marginBottom: 24 }} />
 
             <BodyText>
-              In case you have cavities, our dentists at DentalFix will gently remove the
-              decayed part of your tooth and fill it with a type of filling you choose.
-              Nowadays you can choose from several fillings: from porcelain, plastic, gold
-              or silver amalgam.
+              In case you have cavities,{' '}
+              <a style={{ textDecoration: 'none' }} href="/Meet-us">
+                <Span blue border>
+                  {' '}
+                  our dentists at DentalFix Clinic{' '}
+                </Span>
+              </a>
+              will gently remove the decayed part of your tooth and fill it with a type of
+              filling you choose. Nowadays you can choose from several fillings: from
+              porcelain, plastic, gold or silver amalgam.
             </BodyText>
             <br />
             <BodyText>

@@ -60,7 +60,7 @@ const dentalBonding = () => {
             <Headline size="small" bold className={classes.headline}>
               {currentLink && currentLink.label}
             </Headline>
-            <hr style={{ border: '1px solid #f2f2f2', marginBottom: 24 }} />
+            <hr style={{ border: '1px solid #dadada', marginBottom: 24 }} />
 
             <BodyText>
               For minor imperfections in a smile, conservative treatments are best. Dental
@@ -87,10 +87,15 @@ const dentalBonding = () => {
             <br />
             <BodyText>
               Bonding can be matched to your existing tooth color, for imperceptible
-              blending. The expert cosmetic dentists at DentalFix clinic can help you
-              evaluate your best choice for a cosmetic restoration. Every smile is
-              different, so it helps to sit down with one of our dentists to learn which
-              dental restoration will provide your best outcome.
+              blending. The expert cosmetic dentists at{' '}
+              <a style={{ textDecoration: 'none' }} href="/">
+                <Span blue border>
+                  DentalFix Clinic.
+                </Span>
+              </a>{' '}
+              can help you evaluate your best choice for a cosmetic restoration. Every
+              smile is different, so it helps to sit down with one of our dentists to
+              learn which dental restoration will provide your best outcome.
             </BodyText>
 
             <LinkWrapper href="https://dentalfix.herokuapp.com" target="_blank">

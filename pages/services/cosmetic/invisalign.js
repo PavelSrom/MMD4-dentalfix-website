@@ -60,7 +60,7 @@ const invisalign = () => {
             <Headline size="small" bold className={classes.headline}>
               {currentLink && currentLink.label}
             </Headline>
-            <hr style={{ border: '1px solid #f2f2f2', marginBottom: 24 }} />
+            <hr style={{ border: '1px solid #dadada', marginBottom: 24 }} />
 
             <BodyText>
               Invisalign is a system of clear plastic trays used as orthodontic devices;
@@ -92,7 +92,7 @@ const invisalign = () => {
             <br />
             <BodyText>
               Your Invisalign treatment will consist of a comprehensive evaluation of your
-              mouth. Then, the doctors will take impressions of your teeth by using 3D
+              mouth. Then, <a style={{textDecoration: 'none'}}href="/Meet-us"><Span blue border>the dentists</Span></a> will take impressions of your teeth by using 3D
               imaging technology to customize your aligners. You will receive your smooth
               aligners, which won’t irritate your teeth or gums.
             </BodyText>

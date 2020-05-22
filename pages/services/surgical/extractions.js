@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { Page, Container, LineLength } from '../../../templates/layout'
-import { Headline, Subheadline, BodyText } from '../../../templates/text'
+import { Headline, Subheadline, BodyText, Span } from '../../../templates/text'
 import { RoundedButton, Link, LinkWrapper } from '../../../templates/button'
 import useStyles from '../../../styles/components/services/SpecificService'
 
@@ -61,10 +61,10 @@ const extractions = () => {
             <Headline size="small" bold className={classes.headline}>
             {currentLink && currentLink.label}
             </Headline>
-            <hr style={{ border: '1px solid #f2f2f2', marginBottom: 24 }} />
+            <hr style={{ border: '1px solid #dadada', marginBottom: 24 }} />
             <BodyText>
               You might feel nervous, worried, or even downright terrified at the idea of
-              having a tooth removed. However, the team of high-qualified dentists at
+              having a tooth removed. However, the team of <a style={{textDecoration: 'none'}}href="/Meet-us"><Span blue border> high-qualified dentists</Span></a> at
               DentalFix clinic are here to help you!
             </BodyText>
             <br />

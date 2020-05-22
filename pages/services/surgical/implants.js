@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { Page, Container, LineLength } from '../../../templates/layout'
-import { Headline, Subheadline, BodyText } from '../../../templates/text'
+import { Headline, Subheadline, BodyText, Span } from '../../../templates/text'
 import { RoundedButton, Link, LinkWrapper } from '../../../templates/button'
 import useStyles from '../../../styles/components/services/SpecificService'
 
@@ -59,9 +59,9 @@ const implants = () => {
         <div className={classes.content}>
           <LineLength narrow>
             <Headline size="small" bold className={classes.headline}>
-            {currentLink && currentLink.label}
+              {currentLink && currentLink.label}
             </Headline>
-            <hr style={{ border: '1px solid #f2f2f2', marginBottom: 24 }} />
+            <hr style={{ border: '1px solid #dadada', marginBottom: 24 }} />
             <BodyText>
               Dental implants create another solution for a broken tooth, which cannot be
               saved. The process of fitting dental implants lies in a personalized crown
@@ -71,7 +71,8 @@ const implants = () => {
             </BodyText>
             <br />
             <BodyText bold>The benefits of dental implants:</BodyText>
-            <br /><BodyText>- Great form of replacement of teeth</BodyText>
+            <br />
+            <BodyText>- Great form of replacement of teeth</BodyText>
             <BodyText>- Last for a long time </BodyText>
             <BodyText>- Support tooth structure </BodyText>
             <BodyText>- Stability and comfort</BodyText>
@@ -83,8 +84,14 @@ const implants = () => {
             </BodyText>
             <br />
             <BodyText>
-              Is this the treatment you need? If yes, do not hesitate to contact us about
-              your questions or directly create an appointment in our app.
+              Is this the treatment you need? If yes, do not hesitate to{' '}
+              <a style={{ textDecoration: 'none' }} href="/Contact">
+                <Span blue border>
+                  {' '}
+                  contact us{' '}
+                </Span>
+              </a>{' '}
+              about your questions or directly create an appointment in our app.
             </BodyText>
             <LinkWrapper href="https://dentalfix.herokuapp.com" target="_blank">
               <RoundedButton className={classes.buttonLink} background="secondary">

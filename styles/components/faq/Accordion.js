@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core'
 
 export default makeStyles(theme => ({
   container: {
-    border: `1px solid ${theme.palette.primary.main}`,
+    
     borderRadius: theme.spacing(2),
     marginBottom: theme.spacing(2),
     overflow: 'hidden'

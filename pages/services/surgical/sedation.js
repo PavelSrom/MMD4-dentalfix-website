@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { Page, Container, LineLength } from '../../../templates/layout'
-import { Headline, Subheadline, BodyText } from '../../../templates/text'
+import { Headline, Subheadline, BodyText, Span} from '../../../templates/text'
 import { RoundedButton, Link, LinkWrapper } from '../../../templates/button'
 import useStyles from '../../../styles/components/services/SpecificService'
 
@@ -61,10 +61,10 @@ const sedation = () => {
             <Headline size="small" bold className={classes.headline}>
             {currentLink && currentLink.label}
             </Headline>
-            <hr style={{ border: '1px solid #f2f2f2', marginBottom: 24 }} />
+            <hr style={{ border: '1px solid #dadada', marginBottom: 24 }} />
             <BodyText>
               If you have dental anxiety or a complex dental procedure coming up, dental
-              sedation and dental anesthesia at DentalFix clinic may be right for you. Our
+              sedation and dental anesthesia at <a style={{textDecoration: 'none'}}href="/"><Span blue border>DentalFix Clinic </Span></a> may be right for you. Our
               team believes that his patients should never have to experience unnecessary
               anxiety or worry when it comes to getting the dental care they need.
             </BodyText>

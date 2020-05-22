@@ -63,17 +63,23 @@ const endodontics = () => {
         <div className={classes.content}>
           <LineLength narrow>
             <Headline size="small" bold className={classes.headline}>
-            {currentLink && currentLink.label}
+              {currentLink && currentLink.label}
             </Headline>
-            <hr style={{ border: '1px solid #f2f2f2', marginBottom: 24 }} />
+            <hr style={{ border: '1px solid #dadada', marginBottom: 24 }} />
 
             <BodyText>
               Endodontics, or so-called Root Canal Therapy, is a special field in
               dentistry which focuses on dental pup and tissues surrounding the roots of a
               tooth. Infected tooth can cause a lot of unpleasant pain. The whole process
               of treatment is complex and requires special tools to work with. At
-              DentalFix, our dentists have extended knowledge in endodontics and they will
-              do anything to save your natural teeth.
+              <a style={{ textDecoration: 'none' }} href="/">
+                <Span blue border>
+                  {' '}
+                  DentalFix Clinic
+                </Span>
+              </a>
+              , our dentists have extended knowledge in endodontics and they will do
+              anything to save your natural teeth.
             </BodyText>
             <br />
             <BodyText bold>Endodontics bring relief by:</BodyText>
@@ -87,14 +93,19 @@ const endodontics = () => {
             <br />
             <BodyText>
               With today’s digital equipment, modern anesthesia and the expertise of the
-              doctors at DentalFix clinic, a root canal provides relief, with patient
-              comfort in mind.
+              <a style={{ textDecoration: 'none' }} href="/Meet-us">
+                <Span blue border>
+                  {' '}
+                  dentists at DentalFix Clinic
+                </Span>
+              </a>
+              , a root canal provides relief, with patient comfort in mind.
             </BodyText>
             <br />
             <BodyText>
-              If you have acute or recurring pain in a tooth, contact Dental Care Seattle
-              for an endodontics visit immediately. The faster you act, the sooner we can
-              have you feeling better.
+              If you have acute or recurring pain in a tooth, contact DentalFix clinic for
+              an endodontics visit immediately. The faster you act, the sooner we can have
+              you feeling better.
             </BodyText>
 
             <LinkWrapper href="https://dentalfix.herokuapp.com" target="_blank">

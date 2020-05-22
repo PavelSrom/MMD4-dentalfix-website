@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { Page, Container, LineLength } from '../../../templates/layout'
-import { Headline, Subheadline, BodyText } from '../../../templates/text'
+import { Headline, Subheadline, BodyText, Span } from '../../../templates/text'
 import { RoundedButton, Link, LinkWrapper } from '../../../templates/button'
 import useStyles from '../../../styles/components/services/SpecificService'
 
@@ -61,14 +61,14 @@ const dentures = () => {
             <Headline size="small" bold className={classes.headline}>
             {currentLink && currentLink.label}
             </Headline>
-            <hr style={{ border: '1px solid #f2f2f2', marginBottom: 24 }} />
+            <hr style={{ border: '1px solid #dadada', marginBottom: 24 }} />
             <BodyText>
               Take back control of your smile! Eat the foods you love and restore your
               quality of life. It’s all possible with custom implant-supported dentures.
             </BodyText>
             <br />
             <BodyText>
-              With an implant-supported prosthesis from DentalFix clinic, the
+              With an implant-supported prosthesis from <a style={{textDecoration: 'none'}}href="/"><Span blue border>DentalFix Clinic</Span></a>, the
               high-qualified team of dentists can restore a single missing tooth or an
               entire arch of missing teeth. Implants are good for the health of your mouth
               and gums and offer a rock-solid foundation for your dentures.

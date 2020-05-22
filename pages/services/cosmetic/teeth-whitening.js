@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { Page, Container, LineLength } from '../../../templates/layout'
-import { Headline, Subheadline, BodyText } from '../../../templates/text'
+import { Headline, Subheadline, BodyText, Span } from '../../../templates/text'
 import { RoundedButton, Link, LinkWrapper } from '../../../templates/button'
 import useStyles from '../../../styles/components/services/SpecificService'
 
@@ -60,14 +60,18 @@ const teethWhitening = () => {
           <LineLength narrow>
             <Headline size="small" bold className={classes.headline}>
               {currentLink && currentLink.label}
-
             </Headline>
-            <hr style={{ border: '1px solid #f2f2f2', marginBottom: 24 }} />
+            <hr style={{ border: '1px solid #dadada', marginBottom: 24 }} />
 
             <BodyText>
               Are you self-conscious about your smile? If you think that your stained
               teeth are beyond help, we can help. You’ll be surprised at what’s possible
-              with the high-tech teeth whitening treatments at DentalFix Clinic.
+              with the high-tech teeth whitening treatments at{' '}
+              <a style={{ textDecoration: 'none' }} href="/">
+                <Span blue border>
+                  DentalFix Clinic.
+                </Span>
+              </a>
             </BodyText>
             <br />
             <BodyText bold>DentalFix Clinic offers teeth whitening that:</BodyText>
@@ -87,8 +91,13 @@ const teethWhitening = () => {
             </BodyText>
             <br />
             <BodyText>
-              Smile more often and with total confidence! Contact us about teeth whitening
-              today.
+              Smile more often and with total confidence!{' '}
+              <a style={{ textDecoration: 'none' }} href="/Contact">
+                <Span blue border>
+                  Contact us
+                </Span>
+              </a>{' '}
+              about teeth whitening today.
             </BodyText>
 
             <LinkWrapper href="https://dentalfix.herokuapp.com" target="_blank">

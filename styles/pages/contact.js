@@ -25,8 +25,10 @@ export default makeStyles(theme => ({
   mapContainer: {
     width: '50%',
     [theme.breakpoints.down('sm')]: {
-      width: '100%'
-    }
+      width: '100%',
+      marginTop: 0
+    },
+    marginTop:-100
   },
   map: {
     width: '100%',

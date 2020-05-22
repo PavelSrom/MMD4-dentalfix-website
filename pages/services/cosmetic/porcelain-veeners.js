@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { Page, Container, LineLength } from '../../../templates/layout'
-import { Headline, Subheadline, BodyText } from '../../../templates/text'
+import { Headline, Subheadline, BodyText, Span } from '../../../templates/text'
 import { RoundedButton, Link, LinkWrapper } from '../../../templates/button'
 import useStyles from '../../../styles/components/services/SpecificService'
 
@@ -60,13 +60,19 @@ const porcelainVeeners = () => {
             <Headline size="small" bold className={classes.headline}>
               {currentLink && currentLink.label}
             </Headline>
-            <hr style={{ border: '1px solid #f2f2f2', marginBottom: 24 }} />
+            <hr style={{ border: '1px solid #dadada', marginBottom: 24 }} />
 
             <BodyText>
               A gorgeous smile can have a huge impact on your overall look. If you want to
               achieve an amazing smile, you are encouraged to try the porcelain veneers
-              from DentalFix clinic. Created to establish the perfect form and function
-              for the characteristics of your face, our porcelain veneers are remarkable.
+              from{' '}
+              <a style={{ textDecoration: 'none' }} href="/">
+                <Span blue border>
+                  DentalFix Clinic.
+                </Span>
+              </a>{' '}
+              Created to establish the perfect form and function for the characteristics
+              of your face, our porcelain veneers are remarkable.
             </BodyText>
             <br />
             <BodyText bold>Porcelain veneers can correct:</BodyText>
@@ -78,9 +84,14 @@ const porcelainVeeners = () => {
             <br />
             <BodyText>
               Our procelain veneers are created with the technical skills and artistry of
-              the best dental technicians that DentalFix collaborates with, With unmatched
-              precision and quality, the dental technicians incorporate a myriad of
-              details into your smile design.
+              the best{' '}
+              <a style={{ textDecoration: 'none' }} href="/Meet-us">
+                <Span blue border>
+                  dental technicians
+                </Span>
+              </a>{' '}
+              that DentalFix collaborates with. With unmatched precision and quality, the
+              dental technicians incorporate a myriad of details into your smile design.
             </BodyText>
             <br />
             <BodyText>

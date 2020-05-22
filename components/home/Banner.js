@@ -11,7 +11,7 @@ const Banner = () => {
     <div className={classes.banner}>
       {/* <div className={classes.overlay} /> */}
       <Container>
-        <div className={classes.content} style={{ minHeight: 500 }}>
+        <div className={classes.content} style={{ minHeight: 450 }}>
           <Headline className={classes.heading}>
             Brighten any room with your <Span blue>new smile</Span>
           </Headline>

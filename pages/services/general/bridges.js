@@ -65,7 +65,7 @@ const bridges = () => {
             <Headline size="small" bold className={classes.headline}>
             {currentLink && currentLink.label}
             </Headline>
-            <hr style={{ border: '1px solid #f2f2f2', marginBottom: 24 }} />
+            <hr style={{ border: '1px solid #dadada', marginBottom: 24 }} />
 
             <BodyText>
               Dental bridges represent one of the reliable solutions for missing tooth. A
