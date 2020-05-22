@@ -35,7 +35,6 @@ export const Page = ({ children }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className={classes.page}
-      id="page-wrap"
     >
       {children}
     </motion.main>
