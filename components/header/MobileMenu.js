@@ -26,7 +26,7 @@ const MobileMenu = ({ burgerOpen, setBurgerOpen, pathname }) => {
 
       {links.map(({ url, label, dropdown }) =>
         dropdown ? (
-          <>
+          <div key={url}>
             <BodyText
               color={pathname.startsWith(url) ? 'primary' : null}
               className={classes.mainLink}
@@ -44,9 +44,10 @@ const MobileMenu = ({ burgerOpen, setBurgerOpen, pathname }) => {
                 {label}
               </Link>
             ))}
-          </>
+          </div>
         ) : (
           <Link
+            key={url}
             to={url}
             component={BodyText}
             color={pathname === url ? 'primary' : null}
