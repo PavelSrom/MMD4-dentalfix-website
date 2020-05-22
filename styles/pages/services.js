@@ -25,10 +25,16 @@ export default makeStyles(theme => ({
   imgBox: {
     minWidth: 192,
     minHeight: 192,
-    background: '#f2f2f2',
     [theme.breakpoints.down('sm')]: {
       width: '100%'
-    }
+    },
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  icon: {
+    width: 100,
+    height: 100
   },
   descriptionBox: {
     paddingLeft: theme.spacing(4),

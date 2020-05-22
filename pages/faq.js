@@ -32,6 +32,10 @@ const faq = () => {
     {
       question: t['5'].question,
       answer: t['5'].answer
+    },
+    {
+      question: t['6'].question,
+      answer: t['6'].answer
     }
   ]
 

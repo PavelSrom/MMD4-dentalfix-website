@@ -3,6 +3,11 @@ import { Page, Container, LineLength } from '../../../templates/layout'
 import { Headline, Subheadline, BodyText } from '../../../templates/text'
 import { ButtonLink } from '../../../templates/button'
 import useStyles from '../../../styles/pages/services'
+import bridges from '../../../assets/bridges.svg'
+import crown from '../../../assets/crown.svg'
+import diagnosis from '../../../assets/diagnosis.svg'
+import endodontics from '../../../assets/endodontics.svg'
+import filling from '../../../assets/filling.svg'
 
 const general = () => {
   const classes = useStyles()
@@ -14,7 +19,7 @@ const general = () => {
 			are created with incredible detail. Every tooth is different, so every crown 
 			needs to blend in with your surrounding teeth and perform well.`,
       url: '/services/general/crowns',
-      img: null
+      img: crown
     },
     {
       headline: 'Diagnosis',
@@ -22,7 +27,7 @@ const general = () => {
 			DentalFix’s dentists ensure the professional attitude and complete 
 			diagnosis in order to enhance your self-confidence when you smile!`,
       url: '/services/general/diagnosis',
-      img: null
+      img: diagnosis
     },
     {
       headline: 'Endodontics',
@@ -30,7 +35,7 @@ const general = () => {
 			performs endodontics when a tooth becomes abscessed, infected and/or is 
 			severely painful.`,
       url: '/services/general/endodontics',
-      img: null
+      img: endodontics
     },
     {
       headline: 'Bridges',
@@ -38,7 +43,7 @@ const general = () => {
 			details into every restoration so you feel confident in your smile. Your bridge
 			will also bring back the integrity of your bite, so you can eat with comfort.`,
       url: '/services/general/bridges',
-      img: null
+      img: bridges
     },
     {
       headline: 'Fillings',
@@ -46,7 +51,7 @@ const general = () => {
 			an inlay or onlay is an ideal way to restore the tooth. At DentalFix clinic,
 			we prefer to keep your teeth intact and restore only the unhealthy parts.`,
       url: '/services/general/fillings',
-      img: null
+      img: filling
     }
   ]
 
@@ -67,7 +72,7 @@ const general = () => {
 
           {subcategories.map(({ headline, description, url, img }) => (
             <div key={url} className={classes.serviceBox}>
-              <div className={classes.imgBox}>{/* <img src={img} alt="" /> */}</div>
+              <div className={classes.imgBox}> <img className={classes.icon} src={img} alt="" /> </div>
               <div className={classes.descriptionBox}>
                 <Subheadline bold>{headline}</Subheadline>
                 <BodyText>{description}</BodyText>

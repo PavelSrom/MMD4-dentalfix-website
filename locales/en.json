@@ -23,6 +23,10 @@
     "5": {
       "question": "What is the payment method?",
       "answer": "All payments are made personally at the clinic, and after having the treatment completed. You cannot pay for your treatment online."
+    },
+    "6": {
+      "question": "Can I be a patient if I am under 18 years old?",
+      "answer": "If you are under 18 years old, you cannot create an account and be a patient yourself. You must have an appointment created by your parents or your legal guardian, if they have a patient account. "
     }
   }
 }

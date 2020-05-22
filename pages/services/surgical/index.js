@@ -3,6 +3,10 @@ import { Page, Container, LineLength } from '../../../templates/layout'
 import { Headline, Subheadline, BodyText } from '../../../templates/text'
 import { ButtonLink } from '../../../templates/button'
 import useStyles from '../../../styles/pages/services'
+import dentures from '../../../assets/dentures.svg'
+import extraction from '../../../assets/extraction.svg'
+import implant from '../../../assets/implant.svg'
+import sedation from '../../../assets/sedation.svg'
 
 const surgical = () => {
   const classes = useStyles()
@@ -14,7 +18,7 @@ const surgical = () => {
 			appearance and strong foundation. You deserve to feel comfortable 
 			and confident in your smile!`,
       url: '/services/surgical/implants',
-      img: null
+      img: implant
     },
     {
       headline: 'Extractions',
@@ -22,7 +26,7 @@ const surgical = () => {
 			outpatient procedure with either local, general, intravenous anesthesia, 
 			or a combination.`,
       url: '/services/surgical/extractions',
-      img: null
+      img: extraction
     },
     {
       headline: 'Dentures',
@@ -30,7 +34,7 @@ const surgical = () => {
 			quality of life. At DentalFix it is all possible with custom implant-supported 
 			dentures.`,
       url: '/services/surgical/dentures',
-      img: null
+      img: dentures
     },
     {
       headline: 'Sedation',
@@ -38,7 +42,7 @@ const surgical = () => {
 			comes to getting the dental care you need. That’s why dental sedation 
 			and dental anesthesia may be the right choice for you.`,
       url: '/services/surgical/sedation',
-      img: null
+      img: sedation
     }
   ]
 
@@ -59,7 +63,7 @@ const surgical = () => {
 
           {subcategories.map(({ headline, description, url, img }) => (
             <div key={url} className={classes.serviceBox}>
-              <div className={classes.imgBox}>{/* <img src={img} alt="" /> */}</div>
+             <div className={classes.imgBox}> <img className={classes.icon} src={img} alt="" /> </div>
               <div className={classes.descriptionBox}>
                 <Subheadline bold>{headline}</Subheadline>
                 <BodyText>{description}</BodyText>

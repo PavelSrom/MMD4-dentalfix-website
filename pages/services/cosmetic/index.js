@@ -3,6 +3,10 @@ import { Page, Container, LineLength } from '../../../templates/layout'
 import { Headline, Subheadline, BodyText } from '../../../templates/text'
 import { ButtonLink } from '../../../templates/button'
 import useStyles from '../../../styles/pages/services'
+import invisalign from '../../../assets/braces.svg'
+import teethWhitening from '../../../assets/teethWhitening.svg'
+import endodontics from '../../../assets/endodontics.svg'
+import filling from '../../../assets/filling.svg'
 
 const cosmetic = () => {
   const classes = useStyles()
@@ -14,7 +18,7 @@ const cosmetic = () => {
 			with DentalFix’s dentists, you get a teeth whitening result that works for
 			your type of discoloration.`,
       url: '/services/cosmetic/teeth-whitening',
-      img: null
+      img: teethWhitening
     },
     {
       headline: 'Porcelain veeners',
@@ -22,7 +26,7 @@ const cosmetic = () => {
 			self-confidence. Created to establish the perfect form and function for
 			the characteristics of your face, our porcelain veneers are outstanding.`,
       url: '/services/cosmetic/porcelain-veeners',
-      img: null
+      img: endodontics
     },
     {
       headline: 'Dental bonding',
@@ -30,7 +34,7 @@ const cosmetic = () => {
 			cosmetic dentistry. Bonding is most effective for closing small gaps 
 			between teeth or covering chips or cracks in teeth.`,
       url: '/services/cosmetic/dental-bonding',
-      img: null
+      img: filling
     },
     {
       headline: 'Invisalign',
@@ -39,7 +43,7 @@ const cosmetic = () => {
 			technology to produce a high-def image of your mouth in just seconds.
 			`,
       url: '/services/cosmetic/invisalign',
-      img: null
+      img: invisalign
     }
   ]
 
@@ -62,7 +66,7 @@ const cosmetic = () => {
 
           {subcategories.map(({ headline, description, url, img }) => (
             <div key={url} className={classes.serviceBox}>
-              <div className={classes.imgBox}>{/* <img src={img} alt="" /> */}</div>
+              <div className={classes.imgBox}> <img className={classes.icon} src={img} alt="" /> </div>
               <div className={classes.descriptionBox}>
                 <Subheadline bold>{headline}</Subheadline>
                 <BodyText>{description}</BodyText>

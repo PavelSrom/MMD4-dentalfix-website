@@ -3,7 +3,7 @@ import banner from '../../assets/bannerHome.jpg'
 
 export default makeStyles(theme => ({
   banner: {
-    minHeight: 568,
+    minHeight: 500,
     backgroundImage: `url(${banner})`,
     backgroundSize: 'cover',
     backgroundPosition: '70% 50%',
