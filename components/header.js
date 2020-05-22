@@ -3,46 +3,49 @@ import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import logo from '../assets/logo_64x64.png'
 import { ButtonLink, Link, LinkWrapper } from '../templates/button'
+import { Menu } from '../templates/icons'
 import { BodyText } from '../templates/text'
 import useStyles from '../styles/components/Header'
+import MobileMenu from './header/MobileMenu'
+
+export const links = [
+  {
+    url: '/meet-us',
+    label: 'Meet us'
+  },
+  {
+    url: '/services',
+    label: 'Services',
+    dropdown: [
+      {
+        url: '/services/general',
+        label: 'General dentistry'
+      },
+      {
+        url: '/services/surgical',
+        label: 'Surgical dentistry'
+      },
+      {
+        url: '/services/cosmetic',
+        label: 'Cosmetic dentistry'
+      }
+    ]
+  },
+  {
+    url: '/new-patient',
+    label: 'New patient'
+  },
+  {
+    url: '/contact',
+    label: 'Contact'
+  }
+]
 
 const Header = () => {
   const classes = useStyles()
   const router = useRouter()
   const [dropdownOpen, setDropdownOpen] = useState(false)
-
-  const links = [
-    {
-      url: '/meet-us',
-      label: 'Meet us'
-    },
-    {
-      url: '/services',
-      label: 'Services',
-      dropdown: [
-        {
-          url: '/services/general',
-          label: 'General dentistry'
-        },
-        {
-          url: '/services/surgical',
-          label: 'Surgical dentistry'
-        },
-        {
-          url: '/services/cosmetic',
-          label: 'Cosmetic dentistry'
-        }
-      ]
-    },
-    {
-      url: '/new-patient',
-      label: 'New patient'
-    },
-    {
-      url: '/contact',
-      label: 'Contact'
-    }
-  ]
+  const [burgerOpen, setBurgerOpen] = useState(false)
 
   const buttonToAppointments = (
     <ButtonLink
@@ -62,6 +65,20 @@ const Header = () => {
           <img src={logo} alt="" className={classes.logo} />
         </LinkWrapper>
       </NextLink>
+
+      {/* mobile navigation */}
+      <nav className={classes.mobileNav}>
+        <Menu
+          color="primary"
+          className={classes.menuIcon}
+          onClick={() => setBurgerOpen(!burgerOpen)}
+        />
+        <MobileMenu
+          burgerOpen={burgerOpen}
+          setBurgerOpen={setBurgerOpen}
+          pathname={router.pathname}
+        />
+      </nav>
 
       {/* navigation links */}
       <nav className={classes.desktopNav}>
@@ -104,7 +121,6 @@ const Header = () => {
             </Link>
           )
         )}
-
         {buttonToAppointments}
       </nav>
     </header>

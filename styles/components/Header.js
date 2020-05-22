@@ -5,6 +5,7 @@ export default makeStyles(theme => ({
     background: '#f2f2f2',
     display: 'flex',
     justifyContent: 'space-between',
+    alignItems: 'center',
     padding: `${theme.spacing(1)}px ${theme.spacing(8)}px`,
     [theme.breakpoints.down('sm')]: {
       padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`
@@ -39,5 +40,14 @@ export default makeStyles(theme => ({
     width: theme.spacing(28),
     marginLeft: theme.spacing(3),
     padding: theme.spacing(1)
+  },
+  mobileNav: {
+    display: 'none',
+    [theme.breakpoints.down('sm')]: {
+      display: 'block'
+    }
+  },
+  menuIcon: {
+    fontSize: theme.spacing(4)
   }
 }))
