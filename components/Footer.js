@@ -9,7 +9,6 @@ import useStyles from '../styles/components/Footer'
 const Footer = () => {
   const classes = useStyles()
   const router = useRouter()
-  console.log(router.pathname)
 
   return (
     <footer>
@@ -65,7 +64,9 @@ const Footer = () => {
       )}
 
       <div className={classes.copyright}>
-        <BodyText style={{color: 'white'}} centered>Copyright &copy;2020</BodyText>
+        <BodyText style={{ color: 'white' }} centered>
+          Copyright &copy;2020
+        </BodyText>
       </div>
     </footer>
   )

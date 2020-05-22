@@ -1,28 +1,42 @@
 import { makeStyles } from '@material-ui/core'
 
-
 export default makeStyles(theme => ({
   offers: {
-    backgroundColor: 'white',
+    backgroundColor: 'white'
   },
   offersContainer: {
     display: 'flex',
-    flexDirection: 'row',
-    textAlign: 'center',
-    marginTop:'10%'
+    marginTop: theme.spacing(6),
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      alignItems: 'center',
+      marginTop: 0
+    }
+  },
+  item: {
+    width: '33.3%',
+    padding: `0 ${theme.spacing(3)}px`,
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      maxWidth: 480,
+      padding: 0,
+      marginTop: theme.spacing(6)
+    }
   },
   icon: {
     width: 100,
     height: 100,
-  },
-  subtitle: {
-    color: theme.palette.primary.main,
-    fontSize:20,
-    fontWeight: 'bolder',
-    marginTop:'5%'
+    display: 'block',
+    margin: '0 auto',
+    marginBottom: theme.spacing(3),
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: theme.spacing(2)
+    }
   },
   text: {
-    marginTop:'10%'
+    marginTop: theme.spacing(3),
+    [theme.breakpoints.down('sm')]: {
+      marginTop: theme.spacing(2)
+    }
   }
- 
 }))

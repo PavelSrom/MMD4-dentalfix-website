@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Container } from '../../templates/layout'
-import { Headline, Subheadline, BodyText } from '../../templates/text'
+import { Subheadline, BodyText } from '../../templates/text'
 
 const useStyles = makeStyles(theme => ({
   headline: {

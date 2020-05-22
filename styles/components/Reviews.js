@@ -1,45 +1,27 @@
 import { makeStyles } from '@material-ui/core'
 
 export default makeStyles(theme => ({
-  section: {
-    height: 'auto',
-    backgroundColor: 'white'
-  },
-  review1: {
+  review: {
     borderRadius: 50,
-    border: '3px solid #53969F',
-    backgroundColor: 'white',
+    border: `3px solid ${theme.palette.primary.main}`,
     width: '30%',
-    marginLeft: "auto",
-    marginRight: "auto",
-    padding: '5%' ,  
-  },
-
-  review2: {
-    borderRadius: 50,
-    border: '3px solid #53969F',
-    backgroundColor: 'white',
-    width: '30%',
-    marginLeft: "auto",
-    marginRight: "auto",
-    padding: '5%',
-    opacity: 0.3,
-    
-    
-  },
-  review3: {
-    borderRadius: 50,
-    border: '3px solid #53969F',
-    backgroundColor: 'white',
-    width: '30%',
-    marginLeft: "auto",
-    marginRight: "auto",
-    padding: '5%',
-    opacity: 0.3
+    padding: theme.spacing(6),
+    [theme.breakpoints.down('sm')]: {
+      padding: theme.spacing(4),
+      width: '100%',
+      maxWidth: 640,
+      display: 'block',
+      margin: '0 auto',
+      marginTop: theme.spacing(4)
+    }
   },
   all: {
-      display: 'flex',
-      marginTop: '5%'  
+    display: 'flex',
+    justifyContent: 'space-between',
+    marginTop: theme.spacing(4),
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      justifyContent: 'flex-start'
+    }
   }
- 
 }))

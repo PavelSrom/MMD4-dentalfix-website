@@ -1,8 +1,7 @@
 import React from 'react'
 import useStyles from '../../styles/components/Banner.js'
-import theme from '../../utils/theme'
 import { Container } from '../../templates/layout'
-import { Headline} from '../../templates/text'
+import { Headline, Span } from '../../templates/text'
 import { ButtonLink } from '../../templates/button'
 
 const Banner = () => {
@@ -10,20 +9,21 @@ const Banner = () => {
 
   return (
     <div className={classes.banner}>
+      {/* <div className={classes.overlay} /> */}
       <Container>
-      <Headline className={classes.heading}>
-        Brighten any room with your{' '}
-        <span style={{ color: theme.palette.primary.main }}>new smile</span>
-      </Headline>
-      <ButtonLink
-      to="https://dentalfix.herokuapp.com"
-      target="_blank"
-      background="secondary"
-      size="large"
-      style={{ display: 'block', margin: '0 auto' }}
-    >
-      Book an appointment
-    </ButtonLink>
+        <div className={classes.content} style={{ minHeight: 568 }}>
+          <Headline className={classes.heading}>
+            Brighten any room with your <Span blue>new smile</Span>
+          </Headline>
+          <ButtonLink
+            to="https://dentalfix.herokuapp.com"
+            target="_blank"
+            background="secondary"
+            size="large"
+          >
+            Book an appointment
+          </ButtonLink>
+        </div>
       </Container>
     </div>
   )
