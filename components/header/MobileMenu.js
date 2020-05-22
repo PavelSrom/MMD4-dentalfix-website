@@ -3,6 +3,7 @@ import { links } from '../Header'
 import useStyles from '../../styles/components/header/MobileMenu'
 import { Subheadline, BodyText } from '../../templates/text'
 import { Link } from '../../templates/button'
+import { Close } from '../../templates/icons'
 
 const MobileMenu = ({ burgerOpen, setBurgerOpen, pathname }) => {
   const classes = useStyles()
@@ -12,16 +13,34 @@ const MobileMenu = ({ burgerOpen, setBurgerOpen, pathname }) => {
       className={classes.burgerMenu}
       style={{ transform: burgerOpen ? 'translateX(0)' : 'translateX(100%)' }}
     >
-      <Subheadline bold color="primary">
-        MENU
-      </Subheadline>
+      <div className={classes.header}>
+        <Subheadline bold color="primary">
+          MENU
+        </Subheadline>
+        <Close
+          className={classes.mobileIcon}
+          color="primary"
+          onClick={() => setBurgerOpen(false)}
+        />
+      </div>
 
       {links.map(({ url, label, dropdown }) =>
         dropdown ? (
           <>
-            <BodyText color={pathname === url ? 'primary' : null}>{label}</BodyText>
+            <BodyText
+              color={pathname.startsWith(url) ? 'primary' : null}
+              className={classes.mainLink}
+            >
+              {label}
+            </BodyText>
             {dropdown.map(({ url, label }) => (
-              <Link to={url} component={BodyText} onClick={() => setBurgerOpen(false)}>
+              <Link
+                key={url}
+                to={url}
+                component={BodyText}
+                onClick={() => setBurgerOpen(false)}
+                className={classes.subLink}
+              >
                 {label}
               </Link>
             ))}
@@ -32,6 +51,7 @@ const MobileMenu = ({ burgerOpen, setBurgerOpen, pathname }) => {
             component={BodyText}
             color={pathname === url ? 'primary' : null}
             onClick={() => setBurgerOpen(false)}
+            className={classes.mainLink}
           >
             {label}
           </Link>

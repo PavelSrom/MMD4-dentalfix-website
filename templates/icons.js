@@ -3,5 +3,6 @@ import Call from '@material-ui/icons/Call'
 import Mail from '@material-ui/icons/Mail'
 import Room from '@material-ui/icons/Room'
 import Menu from '@material-ui/icons/Menu'
+import Close from '@material-ui/icons/Close'
 
-export { Schedule, Call, Mail, Room, Menu }
+export { Schedule, Call, Mail, Room, Menu, Close }
