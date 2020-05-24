@@ -27,6 +27,14 @@ const useStyles = makeStyles(theme => ({
     fontSize: ({ size }) => {
       if (size === 'normal') return 20
       if (size === 'large') return 24
+    }, // the below stuff is hover transitions and box shadows
+    boxShadow: ({ size }) => {
+      if (size === 'normal') return '0 2px 4px rgba(0,0,0,.4)'
+      if (size === 'large') return '0 4px 8px rgba(0,0,0,.4)'
+    },
+    transition: 'background-color 350ms ease-in-out',
+    '&:hover': {
+      backgroundColor: 'deeppink' // Gary's favorite color <3
     }
   }
 }))

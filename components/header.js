@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import logo from '../assets/logo_64x64.png'
@@ -47,6 +48,25 @@ const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [burgerOpen, setBurgerOpen] = useState(false)
 
+  const dropdownAnimation = {
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 0.35
+      },
+      display: 'block'
+    },
+    hide: {
+      opacity: 0,
+      transition: {
+        duration: 0.35
+      },
+      transitionEnd: {
+        display: 'none'
+      }
+    }
+  }
+
   const buttonToAppointments = (
     <ButtonLink
       to="https://dentalfix.herokuapp.com"
@@ -62,7 +82,7 @@ const Header = () => {
     <header className={classes.header}>
       <NextLink href="/">
         <LinkWrapper className={classes.logo}>
-          <img src={logo} alt="" className={classes.logo} />
+          <img src={logo} alt="" />
         </LinkWrapper>
       </NextLink>
 
@@ -80,45 +100,54 @@ const Header = () => {
         />
       </nav>
 
-      {/* navigation links */}
+      {/* desktop navigation links */}
       <nav className={classes.desktopNav}>
         {links.map(({ url, label, dropdown }) =>
           dropdown ? (
-            <div key={url} style={{ position: 'relative' }}>
+            <motion.div
+              onHoverStart={() => setDropdownOpen(true)}
+              onHoverEnd={() => setDropdownOpen(false)}
+              key={url}
+              className={classes.navItemWrapper}
+              style={{ position: 'relative' }}
+            >
               <BodyText
                 color={router.pathname.startsWith(url) ? 'primary' : null}
                 className={classes.navItemDropdown}
-                onClick={() => setDropdownOpen(!dropdownOpen)}
               >
                 {label}
               </BodyText>
-
-              {dropdownOpen && (
-                <div className={classes.dropdownDesktop}>
-                  {dropdown.map(({ url, label }) => (
-                    <Link
-                      to={url}
-                      component={BodyText}
-                      color={router.pathname === url ? 'primary' : null}
-                      onClick={() => setDropdownOpen(false)}
-                    >
-                      {label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+              <motion.div
+                initial="exit"
+                animate={dropdownOpen ? 'show' : 'hide'}
+                variants={dropdownAnimation}
+                className={classes.dropdownDesktop}
+              >
+                {dropdown.map(({ url, label }) => (
+                  <Link
+                    key={url}
+                    to={url}
+                    component={BodyText}
+                    color={router.pathname === url ? 'primary' : null}
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </motion.div>
+            </motion.div>
           ) : (
-            <Link
-              to={url}
-              key={url}
-              component={BodyText}
-              color={router.pathname.startsWith(url) ? 'primary' : null}
-              className={classes.navItemLink}
-              onClick={() => setDropdownOpen(false)}
-            >
-              {label}
-            </Link>
+            <div key={url} className={classes.navItemWrapper}>
+              <Link
+                to={url}
+                component={BodyText}
+                color={router.pathname.startsWith(url) ? 'primary' : null}
+                className={classes.navItemLink}
+                onClick={() => setDropdownOpen(false)}
+              >
+                {label}
+              </Link>
+            </div>
           )
         )}
         {buttonToAppointments}

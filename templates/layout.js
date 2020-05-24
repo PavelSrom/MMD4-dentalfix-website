@@ -5,6 +5,7 @@ import clsx from 'clsx'
 const useStyles = makeStyles(theme => ({
   page: {
     minHeight: 'calc(100vh - 70px)',
+    marginTop: 70, // because of the fixed header
     background: '#fff'
   },
   container: {

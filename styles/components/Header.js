@@ -2,30 +2,46 @@ import { makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(theme => ({
   header: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 90,
+    height: 70,
     background: '#f2f2f2',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: `${theme.spacing(1)}px ${theme.spacing(8)}px`,
+    padding: `0 ${theme.spacing(8)}px`,
+    boxShadow: '0 6px 6px rgba(0,0,0,.2)',
     [theme.breakpoints.down('sm')]: {
-      padding: `${theme.spacing(1)}px ${theme.spacing(2)}px`
+      padding: `0 ${theme.spacing(2)}px`
     }
   },
   logo: {
     maxWidth: 64,
     maxHeight: 64,
+    alignSelf: 'center',
     margin: 0,
     cursor: 'pointer'
   },
   desktopNav: {
     display: 'flex',
     alignItems: 'center',
+    height: '100%',
     [theme.breakpoints.down('sm')]: {
       display: 'none'
     }
   },
+  navItemWrapper: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center'
+  },
   navItemLink: {
-    marginLeft: theme.spacing(3)
+    marginLeft: theme.spacing(3),
+    margin: 'auto 0'
   },
   navItemDropdown: {
     marginLeft: theme.spacing(3),
@@ -34,7 +50,7 @@ export default makeStyles(theme => ({
   },
   dropdownDesktop: {
     position: 'absolute',
-    top: 55,
+    top: 70, // header is 70px
     zIndex: 1,
     background: '#f2f2f2',
     width: theme.spacing(28),
