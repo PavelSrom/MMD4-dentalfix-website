@@ -4,7 +4,7 @@ import { Headline, Subheadline, BodyText } from '../../../templates/text'
 import { ButtonLink } from '../../../templates/button'
 import useStyles from '../../../styles/pages/services'
 import invisalign from '../../../assets/braces.svg'
-import teethWhitening from '../../../assets/teethWhitening.svg'
+import teethWhitening from '../../../assets/teethwhitening.svg'
 import endodontics from '../../../assets/endodontics.svg'
 import filling from '../../../assets/filling.svg'
 
@@ -66,7 +66,10 @@ const cosmetic = () => {
 
           {subcategories.map(({ headline, description, url, img }) => (
             <div key={url} className={classes.serviceBox}>
-              <div className={classes.imgBox}> <img className={classes.icon} src={img} alt="" /> </div>
+              <div className={classes.imgBox}>
+                {' '}
+                <img className={classes.icon} src={img} alt="" />{' '}
+              </div>
               <div className={classes.descriptionBox}>
                 <Subheadline bold>{headline}</Subheadline>
                 <BodyText>{description}</BodyText>
