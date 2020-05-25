@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
     },
     transition: 'background-color 350ms ease-in-out',
     '&:hover': {
-      backgroundColor: 'deeppink' // Gary's favorite color <3
+      backgroundColor: '#E28079' // Gary's favorite color <3
     }
   }
 }))

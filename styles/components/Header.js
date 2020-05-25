@@ -41,12 +41,22 @@ export default makeStyles(theme => ({
   },
   navItemLink: {
     marginLeft: theme.spacing(3),
-    margin: 'auto 0'
+    margin: 'auto 0',
+    transition: 'color 350ms ease-in-out',
+    '&:hover': {
+      color: theme.palette.primary.main
+    }
+    
   },
   navItemDropdown: {
     marginLeft: theme.spacing(3),
     cursor: 'pointer',
-    position: 'relative'
+    position: 'relative',
+    transition: 'color 350ms ease-in-out',
+    '&:hover': {
+      color: theme.palette.primary.main
+    }
+   
   },
   dropdownDesktop: {
     position: 'absolute',
@@ -55,7 +65,8 @@ export default makeStyles(theme => ({
     background: '#f2f2f2',
     width: theme.spacing(28),
     marginLeft: theme.spacing(3),
-    padding: theme.spacing(1)
+    padding: theme.spacing(1),
+    
   },
   mobileNav: {
     display: 'none',
