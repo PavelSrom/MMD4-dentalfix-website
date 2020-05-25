@@ -18,7 +18,8 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       width: '100%',
       padding: `${theme.spacing(4)}px ${theme.spacing(2)}px`
-    }
+    },
+    
   },
   lineLength: {
     maxWidth: ({ narrow }) => (narrow ? 768 : 960),

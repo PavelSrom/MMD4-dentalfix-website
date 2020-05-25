@@ -10,7 +10,8 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     [theme.breakpoints.down('md')]: {
       flexDirection: 'column'
-    }
+    },
+    
   },
   half: {
     width: '50%',
