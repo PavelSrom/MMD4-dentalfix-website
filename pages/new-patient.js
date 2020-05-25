@@ -14,7 +14,7 @@ const NewPatient = () => (
     <hr style={{ border: '4px solid #f2f2f2' }} />
     <FirstVisit />
     <Documents />
-    <BecomePatient />
+    <BecomePatient imgPosition="left" />
     <NotSure />
     <CTA />
   </Page>
