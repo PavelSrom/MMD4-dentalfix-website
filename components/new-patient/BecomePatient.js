@@ -13,7 +13,7 @@ const BecomePatient = () => {
   const classes = useStyles()
 
   return (
-    <SectionWithImg imgSrc={img} background="#fff" imgPosition="left">
+    <SectionWithImg imgSrc={img} background="#fff" imgPosition="right">
       <p className={classes.test}>Lorem ipsum dolor sit amet, Pavelski</p>
       <p>Section with imageeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
     </SectionWithImg>

@@ -13,7 +13,6 @@ const Home = () => (
     <Offers />
     <ShortIntro />
     <Reviews />
-    <hr style={{ border: '4px solid #f2f2f2' }} />
     <CTA />
   </Page>
 )

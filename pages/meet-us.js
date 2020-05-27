@@ -9,7 +9,6 @@ import Collaborations from '../components/meet-us/Collaborations'
 const MeetUs = () => (
   <Page>
     <Banner />
-    <hr style={{ border: '4px solid #f2f2f2' }} />
     <Team />
     <Mission />
     <Collaborations />

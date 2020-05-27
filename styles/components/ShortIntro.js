@@ -10,10 +10,7 @@ export default makeStyles(theme => ({
     }
   },
   one: {
-    width: '50%',
-    paddingRight: theme.spacing(4),
     [theme.breakpoints.down('sm')]: {
-      paddingRight: 0,
       width: '100%',
       marginBottom: theme.spacing(4)
     }

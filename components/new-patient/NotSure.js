@@ -1,10 +1,9 @@
 import React from 'react'
-import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core'
-import { Container } from '../../templates/layout'
 import { ButtonLink } from '../../templates/button'
-import { Headline, Subheadline, BodyText } from '../../templates/text'
+import { Subheadline, BodyText } from '../../templates/text'
 import img from '../../assets/new-patient__not-sure.jpg'
+import SectionWithImg from '../SectionWithImg'
 
 const useStyles = makeStyles(theme => ({
   flex: {
@@ -39,27 +38,20 @@ const Documents = () => {
   const classes = useStyles()
 
   return (
-    <Container background="#f2f2f2">
-      <div className={classes.flex}>
-        <div className={classes.half}>
-          <img src={img} alt="" className={classes.img} />
-        </div>
-        <div className={clsx(classes.half, classes.right)}>
-          <Subheadline bold style={{ marginBottom: 32 }}>
-            Still not sure about it?
-          </Subheadline>
+    <SectionWithImg background="#f2f2f2" imgSrc={img} imgPosition="left">
+      <Subheadline bold style={{ marginBottom: 32 }}>
+        Still not sure about it?
+      </Subheadline>
 
-          <BodyText light>
-            Don’t hesitate to contact us or check our Frequently asked question page where
-            you can find more details and answers to your unclarities.
-          </BodyText>
+      <BodyText light>
+        Don’t hesitate to contact us or check our Frequently asked question page where you
+        can find more details and answers to your unclarities.
+      </BodyText>
 
-          <ButtonLink to="/faq" background="primary" size="large" className={classes.cta}>
-            Go to FAQ
-          </ButtonLink>
-        </div>
-      </div>
-    </Container>
+      <ButtonLink to="/faq" background="primary" size="large" className={classes.cta}>
+        Go to FAQ
+      </ButtonLink>
+    </SectionWithImg>
   )
 }
 

@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core'
 import { Container } from '../../templates/layout'
 import { Headline, Subheadline, BodyText } from '../../templates/text'
 import img from '../../assets/new-patient__first-visit.jpg'
+import SectionWithImg from '../SectionWithImg'
 
 const useStyles = makeStyles(theme => ({
   flex: {
@@ -35,38 +36,31 @@ const FirstVisit = () => {
   const classes = useStyles()
 
   return (
-    <Container background="#fff">
-      <div className={classes.flex}>
-        <div className={clsx(classes.half, classes.left)}>
-          <Subheadline bold style={{ marginBottom: 32 }}>
-            Your first visit: what to expect
-          </Subheadline>
+    <SectionWithImg background="#fff" imgSrc={img} imgPosition="right">
+      <Subheadline bold style={{ marginBottom: 32 }}>
+        Your first visit: what to expect
+      </Subheadline>
 
-          <BodyText light color="primary">
-            When you step into our office, our compassionate and friendly team will make
-            you feel like home.
-          </BodyText>
-          <br />
-          <BodyText light>
-            During your visit, we’ll listen to your health concerns and goals, answer any
-            questions, and explain all your options.
-          </BodyText>
-          <br />
-          <BodyText light>
-            You’ll love our friendly, relaxing environment, personable approach, and
-            high-tech, minimally invasive techniques.
-          </BodyText>
-          <br />
-          <BodyText light>
-            Based on the health of your teeth, we’ll decide what type of dental treatment
-            is right for you.
-          </BodyText>
-        </div>
-        <div className={classes.half}>
-          <img src={img} alt="" className={classes.img} />
-        </div>
-      </div>
-    </Container>
+      <BodyText light color="primary">
+        When you step into our office, our compassionate and friendly team will make you
+        feel like home.
+      </BodyText>
+      <br />
+      <BodyText light>
+        During your visit, we’ll listen to your health concerns and goals, answer any
+        questions, and explain all your options.
+      </BodyText>
+      <br />
+      <BodyText light>
+        You’ll love our friendly, relaxing environment, personable approach, and
+        high-tech, minimally invasive techniques.
+      </BodyText>
+      <br />
+      <BodyText light>
+        Based on the health of your teeth, we’ll decide what type of dental treatment is
+        right for you.
+      </BodyText>
+    </SectionWithImg>
   )
 }
 
