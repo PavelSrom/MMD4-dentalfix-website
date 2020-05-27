@@ -3,7 +3,6 @@ import App from 'next/app'
 import Head from 'next/head'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import { PageTransition } from 'next-page-transitions'
 import { AnimatePresence } from 'framer-motion'
 import theme from '../utils/theme'
 import logo from '../public/logo_64x64.png'
@@ -36,15 +35,15 @@ export default class MyApp extends App {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Header />
-          {/* <PageTransition timeout={0} classNames="page-transition"> */}
           <AnimatePresence initial={false} exitBeforeEnter>
             <Component {...pageProps} key={router.route} />
           </AnimatePresence>
-          {/* </PageTransition> */}
           <Footer />
         </ThemeProvider>
 
         <style jsx global>{`
+          @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
           * {
             box-sizing: border-box;
             margin: 0;

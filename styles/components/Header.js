@@ -25,6 +25,10 @@ export default makeStyles(theme => ({
     margin: 0,
     cursor: 'pointer'
   },
+  logoImg: {
+    maxWidth: '100%',
+    height: 'auto'
+  },
   desktopNav: {
     display: 'flex',
     alignItems: 'center',
@@ -46,7 +50,6 @@ export default makeStyles(theme => ({
     '&:hover': {
       color: theme.palette.primary.main
     }
-    
   },
   navItemDropdown: {
     marginLeft: theme.spacing(3),
@@ -56,7 +59,6 @@ export default makeStyles(theme => ({
     '&:hover': {
       color: theme.palette.primary.main
     }
-   
   },
   dropdownDesktop: {
     position: 'absolute',
@@ -64,9 +66,16 @@ export default makeStyles(theme => ({
     zIndex: 1,
     background: '#f2f2f2',
     width: theme.spacing(28),
-    marginLeft: theme.spacing(3),
+    marginLeft: theme.spacing(3)
+  },
+  dropdownLinkWrapper: {
     padding: theme.spacing(1),
-    
+    cursor: 'pointer',
+    transition: 'background-color color 350ms ease-in-out',
+    '&:hover': {
+      backgroundColor: theme.palette.primary.main,
+      color: '#fff'
+    }
   },
   mobileNav: {
     display: 'none',

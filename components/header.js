@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
-import logo from '../assets/logo_64x64.png'
+import logo from '../assets/logo_192x192.png'
 import { ButtonLink, Link, LinkWrapper } from '../templates/button'
 import { Menu } from '../templates/icons'
 import { BodyText } from '../templates/text'
 import useStyles from '../styles/components/Header'
 import MobileMenu from './header/MobileMenu'
+import LanguagePicker from './header/LanguagePicker'
 
 export const links = [
   {
@@ -46,6 +47,7 @@ const Header = () => {
   const classes = useStyles()
   const router = useRouter()
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [langDropdownOpen, setLangDropdownOpen] = useState(false)
   const [burgerOpen, setBurgerOpen] = useState(false)
 
   const dropdownAnimation = {
@@ -82,7 +84,7 @@ const Header = () => {
     <header className={classes.header}>
       <NextLink href="/">
         <LinkWrapper className={classes.logo}>
-          <img src={logo} alt="" />
+          <img src={logo} alt="" className={classes.logoImg} />
         </LinkWrapper>
       </NextLink>
 
@@ -124,15 +126,16 @@ const Header = () => {
                 className={classes.dropdownDesktop}
               >
                 {dropdown.map(({ url, label }) => (
-                  <Link
-                    key={url}
-                    to={url}
-                    component={BodyText}
-                    color={router.pathname === url ? 'primary' : null}
-                    onClick={() => setDropdownOpen(false)}
-                  >
-                    {label}
-                  </Link>
+                  <div key={url} className={classes.dropdownLinkWrapper}>
+                    <Link
+                      to={url}
+                      component={BodyText}
+                      color={router.pathname === url ? 'primary' : null}
+                      onClick={() => setDropdownOpen(false)}
+                    >
+                      {label}
+                    </Link>
+                  </div>
                 ))}
               </motion.div>
             </motion.div>
@@ -150,6 +153,7 @@ const Header = () => {
             </div>
           )
         )}
+        <LanguagePicker open={langDropdownOpen} setOpen={setLangDropdownOpen} />
         {buttonToAppointments}
       </nav>
     </header>
