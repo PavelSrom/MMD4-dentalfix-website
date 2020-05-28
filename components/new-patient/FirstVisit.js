@@ -24,10 +24,6 @@ const FirstVisit = () => (
       minimally invasive techniques.
     </BodyText>
     <br />
-    <BodyText light>
-      Based on the health of your teeth, we’ll decide what type of dental treatment is
-      right for you.
-    </BodyText>
   </SectionWithImg>
 )
 
