@@ -11,23 +11,22 @@ export default makeStyles(theme => ({
   imgBox: {
     width: '40%',
     order: ({ imgPosition }) => (imgPosition === 'left' ? 1 : 2),
-    [theme.breakpoints.down('md')]: {
-      width: '50%' // optional
-    },
+    // [theme.breakpoints.down('md')]: {
+    //   width: '50%' // optional
+    // },
     [theme.breakpoints.down('sm')]: {
       width: '100%'
     }
   },
   content: {
     width: '60%',
-    padding: theme.spacing(5),
+    padding: theme.spacing(4),
     paddingLeft: ({ imgPosition }) => (imgPosition === 'left' ? theme.spacing(8) : '10%'),
     paddingRight: ({ imgPosition }) =>
       imgPosition === 'left' ? '10%' : theme.spacing(8),
     order: ({ imgPosition }) => (imgPosition === 'left' ? 2 : 1),
     [theme.breakpoints.down('md')]: {
-      width: '50%', // optional
-      padding: theme.spacing(6),
+      // width: '50%', // optional
       paddingLeft: ({ imgPosition }) =>
         imgPosition === 'left' ? theme.spacing(2) : '6%',
       paddingRight: ({ imgPosition }) =>
