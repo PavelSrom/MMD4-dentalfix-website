@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import useStyles from '../../styles/components/Reviews.js'
 import { BodyText, Subheadline } from '../../templates/text'
 import { Container } from '../../templates/layout'
-import { ArrowBack, ArrowForward } from '../../templates/icons'
 import Slider from 'react-slick'
 
 const reviews = [
@@ -25,14 +24,12 @@ const reviews = [
 
 const Reviews = () => {
   const classes = useStyles()
-  const arr = ['one', 'two', 'three']
 
-  var settings = {
+  const sliderSettings = {
     dots: true,
+    arrows: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
+    speed: 500
   }
 
   return (
@@ -43,7 +40,7 @@ const Reviews = () => {
 
       {/* arrows */}
       <div className={classes.reviewBox}>
-        <Slider {...settings}>
+        <Slider {...sliderSettings}>
           {reviews.map(({ text, author }) => (
             <div key={author} className={classes.review}>
               <BodyText>{text}</BodyText>

@@ -79,6 +79,11 @@ export default class MyApp extends App {
             opacity: 0;
             transition: opacity 350ms;
           }
+
+          .slick-prev:before,
+          .slick-next:before {
+            color: ${theme.palette.primary.main} !important;
+          }
         `}</style>
       </>
     )

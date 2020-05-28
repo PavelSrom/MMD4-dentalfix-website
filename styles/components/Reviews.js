@@ -7,6 +7,9 @@ export default makeStyles(theme => ({
   reviewBox: {
     maxWidth: 320,
     margin: '0 auto',
+    [theme.breakpoints.down('xs')]: {
+      maxWidth: 256 // otherwise the arrows don't show on small screens
+    }
   },
   review: {
     position: 'relative',
