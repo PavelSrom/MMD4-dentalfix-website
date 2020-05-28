@@ -5,12 +5,12 @@ export default makeStyles(theme => ({
     marginBottom: theme.spacing(6)
   },
   reviewBox: {
-    maxWidth: 960,
-    margin: '0 auto'
+    maxWidth: 320,
+    margin: '0 auto',
   },
   review: {
     position: 'relative',
-    maxWidth: 960,
+    maxWidth: 320,
     margin: '0 auto',
     borderRadius: 50,
     border: `3px solid ${theme.palette.primary.main}`,
