@@ -50,15 +50,10 @@ const FirstVisit = () => {
         During your visit, we’ll listen to your health concerns and goals, answer any
         questions, and explain all your options.
       </BodyText>
-      <br />
+      
       <BodyText light>
         You’ll love our friendly, relaxing environment, personable approach, and
         high-tech, minimally invasive techniques.
-      </BodyText>
-      <br />
-      <BodyText light>
-        Based on the health of your teeth, we’ll decide what type of dental treatment is
-        right for you.
       </BodyText>
     </SectionWithImg>
   )

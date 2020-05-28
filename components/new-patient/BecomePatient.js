@@ -1,7 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core'
-import img from '../../assets/new-patient__not-sure.jpg'
 import SectionWithImg from '../SectionWithImg'
+import screenshot from '../../assets/screenshot.png'
 
 const useStyles = makeStyles(theme => ({
   test: {
@@ -13,7 +13,7 @@ const BecomePatient = () => {
   const classes = useStyles()
 
   return (
-    <SectionWithImg imgSrc={img} background="#fff" imgPosition="right">
+    <SectionWithImg imgSrc={screenshot} background="#fff" imgPosition="right">
       <p className={classes.test}>Lorem ipsum dolor sit amet, Pavelski</p>
       <p>Section with imageeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
     </SectionWithImg>

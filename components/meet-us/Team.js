@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Container } from '../../templates/layout'
 import { Subheadline, BodyText } from '../../templates/text'
+import doctor from '../../assets/doctor.svg'
 
 const useStyles = makeStyles(theme => ({
   headline: {
@@ -23,9 +24,8 @@ const useStyles = makeStyles(theme => ({
     }
   },
   avatar: {
-    width: 192,
-    height: 192,
-    background: '#eee',
+    width: 176,
+    height: 176,
     margin: `0 auto ${theme.spacing(2)}px auto`
   }
 }))
@@ -57,7 +57,10 @@ const Team = () => {
       <div className={classes.list}>
         {team.map(({ name, area }) => (
           <div key={name} className={classes.box}>
-            <div className={classes.avatar} />
+            <div className={classes.avatar}>
+              <img src={doctor} className={classes.avatar} />
+            </div>
+
             <Subheadline light centered>
               {name}
             </Subheadline>

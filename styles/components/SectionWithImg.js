@@ -20,7 +20,7 @@ export default makeStyles(theme => ({
   },
   content: {
     width: '60%',
-    padding: theme.spacing(8),
+    padding: theme.spacing(5),
     paddingLeft: ({ imgPosition }) => (imgPosition === 'left' ? theme.spacing(8) : '10%'),
     paddingRight: ({ imgPosition }) =>
       imgPosition === 'left' ? '10%' : theme.spacing(8),
