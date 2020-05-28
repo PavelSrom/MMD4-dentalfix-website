@@ -8,7 +8,6 @@ const FirstVisit = () => (
     <Subheadline bold style={{ marginBottom: 32 }}>
       Your first visit: what to expect
     </Subheadline>
-
     <BodyText light color="primary">
       When you step into our office, our compassionate and friendly team will make you
       feel like home.

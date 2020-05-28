@@ -1,7 +1,7 @@
 import React from 'react'
 import useStyles from '../../styles/components/ShortIntro.js'
 import img from '../../assets/shortIntro.jpeg'
-import { BodyText, Span } from '../../templates/text'
+import { BodyText, Span, Subheadline } from '../../templates/text'
 import SectionWithImg from '../SectionWithImg'
 
 const ShortIntro = () => {
@@ -9,6 +9,9 @@ const ShortIntro = () => {
 
   return (
     <SectionWithImg imgSrc={img} imgPosition="right" background="#f2f2f2">
+       <Subheadline bold style={{ marginBottom: 32 }}>
+      Our mission
+    </Subheadline>
       <BodyText className={classes.one}>
         DentalFix’s mission statement is intended to make a positive difference in the
         lives of children, youth and adults by offering{' '}

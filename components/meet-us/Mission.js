@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core'
-import { BodyText } from '../../templates/text'
+import { BodyText, Subheadline } from '../../templates/text'
 import SectionWithImg from '../SectionWithImg'
 import img from '../../assets/meet-us__mission.jpg'
 
@@ -38,6 +38,9 @@ const Documents = () => {
 
   return (
     <SectionWithImg background="#f2f2f2" imgSrc={img} imgPosition="left">
+       <Subheadline bold style={{ marginBottom: 32 }}>
+      About us
+    </Subheadline>
       <BodyText>
         Our mission is to deliver the highest quality care, unprecedented comfort, and
         service.
