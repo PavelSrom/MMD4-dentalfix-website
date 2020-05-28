@@ -6,6 +6,8 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import { AnimatePresence } from 'framer-motion'
 import theme from '../utils/theme'
 import logo from '../public/logo_64x64.png'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'

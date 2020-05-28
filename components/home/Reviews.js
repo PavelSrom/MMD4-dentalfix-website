@@ -2,47 +2,57 @@ import React, { useState } from 'react'
 import useStyles from '../../styles/components/Reviews.js'
 import { BodyText, Subheadline } from '../../templates/text'
 import { Container } from '../../templates/layout'
+import { ArrowBack, ArrowForward } from '../../templates/icons'
+import Slider from 'react-slick'
+
+const reviews = [
+  {
+    text: `I am personally very happy with the services that I get here and I totally
+		recommend the clinic.`,
+    author: '-Dragos Andrei'
+  },
+  {
+    text: `I am extremely satisfied with the quality of the services that I can get at
+		DentalFix. Thanks to them I became more confident and I’m smiling more!`,
+    author: '-Nicoleta Astancai'
+  },
+  {
+    text: `Very well prepared dentists which managed to solve my dental problems in the
+		most professional way.`,
+    author: '-Maria Blaga'
+  }
+]
 
 const Reviews = () => {
   const classes = useStyles()
-  const [emphasizedReview] = useState(1) // the middle one
+  const arr = ['one', 'two', 'three']
 
-  const reviews = [
-    {
-      text: `I am personally very happy with the services that I get here and I totally
-			recommend the clinic.`,
-      author: '-Dragos Andrei'
-    },
-    {
-      text: `I am extremely satisfied with the quality of the services that I can get at
-			DentalFix. Thanks to them I became more confident and I’m smiling more!`,
-      author: '-Nicoleta Astancai'
-    },
-    {
-      text: `Very well prepared dentists which managed to solve my dental problems in the
-			most professional way.`,
-      author: '-Maria Blaga'
-    }
-  ]
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  }
 
   return (
     <Container background="#fff">
-      <Subheadline light centered>
-        What our patients say{' '}
+      <Subheadline light centered className={classes.subheadline}>
+        What our patients say
       </Subheadline>
-      <div className={classes.all}>
-        {reviews.map(({ text, author }, index) => (
-          <div
-            key={author}
-            className={classes.review}
-            style={{ opacity: index === emphasizedReview ? 1 : 0.3 }}
-          >
-            <BodyText>{text}</BodyText>
-            <br />
-            <br />
-            <BodyText>{author}</BodyText>
-          </div>
-        ))}
+
+      {/* arrows */}
+      <div className={classes.reviewBox}>
+        <Slider {...settings}>
+          {reviews.map(({ text, author }) => (
+            <div key={author} className={classes.review}>
+              <BodyText>{text}</BodyText>
+              <br />
+              <br />
+              <BodyText>{author}</BodyText>
+            </div>
+          ))}
+        </Slider>
       </div>
     </Container>
   )
