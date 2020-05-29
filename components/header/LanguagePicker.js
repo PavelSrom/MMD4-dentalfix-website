@@ -6,6 +6,17 @@ import { Language } from '../../templates/icons'
 import { useLocalization } from '../../utils/hooks'
 import useStyles from '../../styles/components/header/LanguagePicker'
 
+export const languages = [
+  {
+    label: 'English',
+    value: 'en'
+  },
+  {
+    label: 'Romanian',
+    value: 'ro'
+  }
+]
+
 const LanguagePicker = ({ open, setOpen }) => {
   const classes = useStyles()
   const router = useRouter()
@@ -34,17 +45,6 @@ const LanguagePicker = ({ open, setOpen }) => {
       }
     }
   }
-
-  const languages = [
-    {
-      label: 'English',
-      value: 'en'
-    },
-    {
-      label: 'Romanian',
-      value: 'ro'
-    }
-  ]
 
   return (
     <motion.div

@@ -1,6 +1,17 @@
 import { makeStyles } from '@material-ui/core'
 
 export default makeStyles(theme => ({
+  overlay: {
+    position: 'fixed',
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    width: '100vw',
+    height: '100vh',
+    background: '#333',
+    zIndex: 65
+  },
   burgerMenu: {
     position: 'fixed',
     top: 0,
@@ -29,5 +40,8 @@ export default makeStyles(theme => ({
   },
   subLink: {
     marginLeft: theme.spacing(2)
+  },
+  languages: {
+    marginTop: theme.spacing(6)
   }
 }))
