@@ -84,6 +84,9 @@ export default class MyApp extends App {
           .slick-next:before {
             color: ${theme.palette.primary.main} !important;
           }
+
+          .slick-slide: 
+            display: flex !important;
         `}</style>
       </>
     )

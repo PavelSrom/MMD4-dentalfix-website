@@ -3,6 +3,8 @@ import useStyles from '../../styles/components/Reviews.js'
 import { BodyText, Subheadline } from '../../templates/text'
 import { Container } from '../../templates/layout'
 import Slider from 'react-slick'
+import quote1 from '../../assets/quote1.svg'
+import quote2 from '../../assets/quote2.svg'
 
 const reviews = [
   {
@@ -12,7 +14,7 @@ const reviews = [
   },
   {
     text: `I am extremely satisfied with the quality of the services that I can get at
-		DentalFix. Thanks to them I became more confident and I’m smiling more!`,
+		DentalFix. Well prepared dentists.`,
     author: '-Nicoleta Astancai'
   },
   {
@@ -43,10 +45,15 @@ const Reviews = () => {
         <Slider {...sliderSettings}>
           {reviews.map(({ text, author }) => (
             <div key={author} className={classes.review}>
+              <img src={quote1} className={classes.quote1}/>
+              <br />
               <BodyText>{text}</BodyText>
+              <br />
+              <img src={quote2} className={classes.quote2}/>
               <br />
               <br />
               <BodyText>{author}</BodyText>
+              
             </div>
           ))}
         </Slider>

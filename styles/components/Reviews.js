@@ -9,7 +9,7 @@ export default makeStyles(theme => ({
     margin: '0 auto',
     [theme.breakpoints.down('xs')]: {
       maxWidth: 256 // otherwise the arrows don't show on small screens
-    }
+    }, 
   },
   review: {
     position: 'relative',
@@ -24,14 +24,27 @@ export default makeStyles(theme => ({
       display: 'block',
       margin: '0 auto',
       marginTop: theme.spacing(4)
-    }
+    },
+    height: 330
   },
   arrowBack: {
     position: 'absolute',
-    left: theme.spacing(1)
+    left: theme.spacing(1),
+    fontSize: 100
+    
   },
   arrowForward: {
     position: 'absolute',
     right: theme.spacing(1)
+  },
+  quote1: {
+    width:20,
+    height:20
+  },
+  quote2: {
+    width:20,
+    height:20,
+    float: 'right',
+   
   }
 }))
