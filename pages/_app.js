@@ -54,6 +54,7 @@ export default class MyApp extends App {
           html,
           body {
             background: #fff;
+            overflow-x: hidden !important;
           }
           p,
           h1,
@@ -63,21 +64,6 @@ export default class MyApp extends App {
           h5,
           h6 {
             line-height: 1.5;
-          }
-
-          .page-transition-enter {
-            opacity: 0;
-          }
-          .page-transition-enter-active {
-            opacity: 1;
-            transition: opacity 350ms;
-          }
-          .page-transition-exit {
-            opacity: 1;
-          }
-          .page-transition-exit-active {
-            opacity: 0;
-            transition: opacity 350ms;
           }
 
           .slick-prev:before,

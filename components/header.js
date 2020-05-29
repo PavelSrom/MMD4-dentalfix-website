@@ -120,7 +120,7 @@ const Header = () => {
                 {label}
               </BodyText>
               <motion.div
-                initial="exit"
+                initial="hide"
                 animate={dropdownOpen ? 'show' : 'hide'}
                 variants={dropdownAnimation}
                 className={classes.dropdownDesktop}
