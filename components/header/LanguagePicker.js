@@ -55,7 +55,7 @@ const LanguagePicker = ({ open, setOpen }) => {
     >
       <Language className={classes.icon} />
       <motion.div
-        initial="exit"
+        initial="hide"
         animate={open ? 'show' : 'hide'}
         variants={dropdownAnimation}
         className={classes.dropdownDesktop}

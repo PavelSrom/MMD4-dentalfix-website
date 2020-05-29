@@ -42,7 +42,7 @@ const MobileMenu = ({ burgerOpen, setBurgerOpen, pathname }) => {
   return (
     <>
       <motion.div
-        initial="exit"
+        initial="hide"
         animate={burgerOpen ? 'show' : 'hide'}
         variants={overlayAnimation}
         className={classes.overlay}
