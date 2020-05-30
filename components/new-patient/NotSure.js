@@ -1,38 +1,9 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core'
 import { ButtonLink } from '../../templates/button'
 import { Subheadline, BodyText } from '../../templates/text'
 import img from '../../assets/new-patient__not-sure.jpg'
 import SectionWithImg from '../SectionWithImg'
-
-const useStyles = makeStyles(theme => ({
-  flex: {
-    display: 'flex',
-    [theme.breakpoints.down('md')]: {
-      flexDirection: 'column'
-    }
-  },
-  half: {
-    width: '50%',
-    [theme.breakpoints.down('md')]: {
-      width: '100%'
-    }
-  },
-  right: {
-    paddingLeft: theme.spacing(4),
-    [theme.breakpoints.down('md')]: {
-      paddingLeft: 0,
-      marginTop: theme.spacing(2)
-    }
-  },
-  img: {
-    maxWidth: '100%',
-    height: 'auto'
-  },
-  cta: {
-    marginTop: theme.spacing(4)
-  }
-}))
+import useStyles from '../../styles/components/new-patient/NotSure'
 
 const Documents = () => {
   const classes = useStyles()

@@ -1,46 +1,17 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core'
 import { BodyText, Subheadline } from '../../templates/text'
 import SectionWithImg from '../SectionWithImg'
 import img from '../../assets/meet-us__mission.jpg'
-
-const useStyles = makeStyles(theme => ({
-  flex: {
-    display: 'flex',
-    [theme.breakpoints.down('md')]: {
-      flexDirection: 'column'
-    }
-  },
-  half: {
-    width: '50%',
-    [theme.breakpoints.down('md')]: {
-      width: '100%'
-    }
-  },
-  right: {
-    paddingLeft: theme.spacing(4),
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    [theme.breakpoints.down('md')]: {
-      paddingLeft: 0,
-      marginTop: theme.spacing(2)
-    }
-  },
-  img: {
-    maxWidth: '100%',
-    height: 'auto'
-  }
-}))
+import useStyles from '../../styles/components/meet-us/Mission'
 
 const Documents = () => {
   const classes = useStyles()
 
   return (
     <SectionWithImg background="#f2f2f2" imgSrc={img} imgPosition="left">
-       <Subheadline bold style={{ marginBottom: 32 }}>
-      About us
-    </Subheadline>
+      <Subheadline bold style={{ marginBottom: 32 }}>
+        About us
+      </Subheadline>
       <BodyText>
         Our mission is to deliver the highest quality care, unprecedented comfort, and
         service.

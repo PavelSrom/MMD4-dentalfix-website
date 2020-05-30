@@ -1,8 +1,7 @@
-import { makeStyles } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(theme => ({
   container: {
-    
     borderRadius: theme.spacing(2),
     marginBottom: theme.spacing(2),
     overflow: 'hidden'
@@ -12,6 +11,6 @@ export default makeStyles(theme => ({
     cursor: 'pointer'
   },
   content: {
-    padding: `0 ${theme.spacing(2)}px` // this padding makes it animate weird
+    padding: `0 ${theme.spacing(2)}px`
   }
 }))

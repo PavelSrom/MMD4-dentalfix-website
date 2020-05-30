@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
 const Button = ({ children }) => {
   const classes = useStyles()
 
-  return <button className={classes.button}> {children}</button>
+  return <button className={classes.button}>{children}</button>
 }
 
 export const LinkWrapper = ({ children, style, ...rest }) => (

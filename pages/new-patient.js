@@ -11,7 +11,6 @@ import CTA from '../components/new-patient/CTA'
 const NewPatient = () => (
   <Page>
     <Banner />
-    <hr style={{ border: '4px solid #f2f2f2' }} />
     <FirstVisit />
     <Documents />
     <BecomePatient imgPosition="left" />

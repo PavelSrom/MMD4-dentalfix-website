@@ -1,6 +1,6 @@
 import React from 'react'
 import { Page, Container } from '../templates/layout'
-import { Headline, Subheadline, BodyText } from '../templates/text'
+import { Headline, BodyText } from '../templates/text'
 import { Call, Mail, Room, Schedule } from '../templates/icons'
 import useStyles from '../styles/pages/contact'
 
@@ -10,7 +10,9 @@ const Contact = () => {
   return (
     <Page>
       <Container>
-        <Headline size="small" className={classes.headline}>Your smile starts here!</Headline>
+        <Headline size="small" className={classes.headline}>
+          Your smile starts here!
+        </Headline>
 
         <div className={classes.flex}>
           <div className={classes.info}>
@@ -23,22 +25,22 @@ const Contact = () => {
             {/* icons with information */}
             <div className={classes.row}>
               <Call className={classes.infoIcon} />
-              <BodyText >+400 233 280 111</BodyText>
+              <BodyText>+400 233 280 111</BodyText>
             </div>
 
             <div className={classes.row}>
               <Mail className={classes.infoIcon} />
-              <BodyText >dentalfix@gmail.com</BodyText>
+              <BodyText>dentalfix@gmail.com</BodyText>
             </div>
 
             <div className={classes.row}>
               <Room className={classes.infoIcon} />
-              <BodyText >Street Bunis, nr. 4, Neamt County</BodyText>
+              <BodyText>Street Bunis, nr. 4, Neamt County</BodyText>
             </div>
 
             <div className={classes.row}>
               <Schedule className={classes.infoIcon} />
-              <BodyText >
+              <BodyText>
                 Monday - Friday
                 <br />
                 9:00am - 8:00pm
@@ -54,7 +56,6 @@ const Contact = () => {
             />
           </div>
         </div>
-
       </Container>
     </Page>
   )

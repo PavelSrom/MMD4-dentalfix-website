@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
 import banner from '../../assets/bannerHome.jpg'
 
 export default makeStyles(theme => ({
