@@ -43,7 +43,7 @@ const Documents = () => {
         Still not sure about it?
       </Subheadline>
 
-      <BodyText light>
+      <BodyText>
         Don’t hesitate to contact us or check our Frequently asked question page where you
         can find more details and answers to your unclarities.
       </BodyText>

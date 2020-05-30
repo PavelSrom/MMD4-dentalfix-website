@@ -8,17 +8,17 @@ const FirstVisit = () => (
     <Subheadline bold style={{ marginBottom: 32 }}>
       Your first visit: what to expect
     </Subheadline>
-    <BodyText light color="primary">
+    <BodyText color="primary">
       When you step into our office, our compassionate and friendly team will make you
       feel like home.
     </BodyText>
     <br />
-    <BodyText light>
+    <BodyText>
       During your visit, we’ll listen to your health concerns and goals, answer any
       questions, and explain all your options.
     </BodyText>
     <br />
-    <BodyText light>
+    <BodyText>
       You’ll love our friendly, relaxing environment, personable approach, and high-tech,
       minimally invasive techniques.
     </BodyText>

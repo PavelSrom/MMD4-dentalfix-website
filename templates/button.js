@@ -53,9 +53,16 @@ export const LinkWrapper = ({ children, style, ...rest }) => (
 
 // DESC:			custom component to navigate between pages
 // USAGE:			whenever you wanna navigate between pages, and PROVIDE THE 'component' PROP !!!
-export const Link = ({ component: Component, to, className, children, ...rest }) => (
+export const Link = ({
+  component: Component,
+  to,
+  className,
+  children,
+  target,
+  ...rest
+}) => (
   <NextLink href={to}>
-    <a style={{ textDecoration: 'none', color: 'inherit' }}>
+    <a style={{ textDecoration: 'none', color: 'inherit' }} target={target}>
       <Component className={className} {...rest}>
         {children}
       </Component>

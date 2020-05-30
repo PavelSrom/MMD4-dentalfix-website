@@ -42,6 +42,6 @@ export default makeStyles(theme => ({
     marginLeft: theme.spacing(2)
   },
   languages: {
-    marginTop: theme.spacing(6)
+    marginTop: theme.spacing(10)
   }
 }))
