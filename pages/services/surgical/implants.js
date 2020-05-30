@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { Page, Container, LineLength } from '../../../templates/layout'
 import { Headline, Subheadline, BodyText, Span } from '../../../templates/text'
@@ -34,74 +35,82 @@ const implants = () => {
   ]
 
   const currentLink = links.find(({ url }) => router.pathname === url)
-  console.log(currentLink)
 
   return (
-    <Page>
-      <Container background="#fff" className={classes.container}>
-        {/* sidebar with links */}
-        <div className={classes.sidebar}>
-          {links.map(({ label, url }) => (
-            <Link
-              key={url}
-              component={Subheadline}
-              light
-              to={url}
-              className={classes.sidebarLink}
-              color={router.pathname === url ? 'primary' : null}
-            >
-              {label}
-            </Link>
-          ))}
-        </div>
+    <>
+      <Head>
+        <title>Implants | Services | DentalFix | Savinesti</title>
+        <meta
+          name="description"
+          content="DentalFix offers dental implants that can amaze you with their natural appearance and strong foundation."
+        />
+      </Head>
+      <Page>
+        <Container background="#fff" className={classes.container}>
+          {/* sidebar with links */}
+          <div className={classes.sidebar}>
+            {links.map(({ label, url }) => (
+              <Link
+                key={url}
+                component={Subheadline}
+                light
+                to={url}
+                className={classes.sidebarLink}
+                color={router.pathname === url ? 'primary' : null}
+              >
+                {label}
+              </Link>
+            ))}
+          </div>
 
-        {/* page content */}
-        <div className={classes.content}>
-          <LineLength narrow>
-            <Headline size="small" bold className={classes.headline}>
-              {currentLink && currentLink.label}
-            </Headline>
-            <hr style={{ border: '1px solid #dadada', marginBottom: 24 }} />
-            <BodyText>
-              Dental implants create another solution for a broken tooth, which cannot be
-              saved. The process of fitting dental implants lies in a personalized crown
-              and dental implant, whose shape is comparable to a screw. Dental implant is
-              placed into your jawbone on which crown is settled through so called
-              connector, known as abutment.
-            </BodyText>
-            <br />
-            <BodyText bold>The benefits of dental implants:</BodyText>
-            <br />
-            <BodyText>- Great form of replacement of teeth</BodyText>
-            <BodyText>- Last for a long time </BodyText>
-            <BodyText>- Support tooth structure </BodyText>
-            <BodyText>- Stability and comfort</BodyText>
-            <br />
-            <BodyText>
-              Don’t let missing or badly damaged teeth hurt your confidence or your
-              health. We’ll help you understand why high-tech dental implants may be the
-              best solution.
-            </BodyText>
-            <br />
-            <BodyText>
-              Is this the treatment you need? If yes, do not hesitate to{' '}
-              <a style={{ textDecoration: 'none' }} href="/Contact">
-                <Span blue border>
-                  {' '}
-                  contact us{' '}
-                </Span>
-              </a>{' '}
-              about your questions or directly create an appointment in our app.
-            </BodyText>
-            <LinkWrapper href="https://dentalfix.herokuapp.com" target="_blank">
-              <RoundedButton className={classes.buttonLink} background="secondary">
-                Request an appointment
-              </RoundedButton>
-            </LinkWrapper>
-          </LineLength>
-        </div>
-      </Container>
-    </Page>
+          {/* page content */}
+          <div className={classes.content}>
+            <LineLength narrow>
+              <Headline size="small" bold className={classes.headline}>
+                {currentLink && currentLink.label}
+              </Headline>
+              <hr style={{ border: '1px solid #dadada', marginBottom: 24 }} />
+              <BodyText>
+                Dental implants create another solution for a broken tooth, which cannot
+                be saved. The process of fitting dental implants lies in a personalized
+                crown and dental implant, whose shape is comparable to a screw. Dental
+                implant is placed into your jawbone on which crown is settled through so
+                called connector, known as abutment.
+              </BodyText>
+              <br />
+              <BodyText bold>The benefits of dental implants:</BodyText>
+              <br />
+              <BodyText>- Great form of replacement of teeth</BodyText>
+              <BodyText>- Last for a long time </BodyText>
+              <BodyText>- Support tooth structure </BodyText>
+              <BodyText>- Stability and comfort</BodyText>
+              <br />
+              <BodyText>
+                Don’t let missing or badly damaged teeth hurt your confidence or your
+                health. We’ll help you understand why high-tech dental implants may be the
+                best solution.
+              </BodyText>
+              <br />
+              <BodyText>
+                Is this the treatment you need? If yes, do not hesitate to{' '}
+                <a style={{ textDecoration: 'none' }} href="/Contact">
+                  <Span blue border>
+                    {' '}
+                    contact us{' '}
+                  </Span>
+                </a>{' '}
+                about your questions or directly create an appointment in our app.
+              </BodyText>
+              <LinkWrapper href="https://dentalfix.herokuapp.com" target="_blank">
+                <RoundedButton className={classes.buttonLink} background="secondary">
+                  Request an appointment
+                </RoundedButton>
+              </LinkWrapper>
+            </LineLength>
+          </div>
+        </Container>
+      </Page>
+    </>
   )
 }
 

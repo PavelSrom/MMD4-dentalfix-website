@@ -65,7 +65,7 @@ export default makeStyles(theme => ({
     top: 70, // header is 70px
     zIndex: 1,
     background: '#f2f2f2',
-    width: theme.spacing(28),
+    width: theme.spacing(22),
     marginLeft: theme.spacing(3)
   },
   dropdownLinkWrapper: {

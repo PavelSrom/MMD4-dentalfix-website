@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import { Page, Container, LineLength } from '../../../templates/layout'
 import { Headline, Subheadline, BodyText } from '../../../templates/text'
 import { ButtonLink } from '../../../templates/button'
@@ -48,45 +49,54 @@ const cosmetic = () => {
   ]
 
   return (
-    <Page>
-      <Container background="#fff">
-        <LineLength>
-          <Headline size="small" centered className={classes.headline}>
-            Cosmetic dentistry
-          </Headline>
-          <Subheadline light centered>
-            Feeling good when you smile is a true asset. At DentalFix we love helping our
-            patients achieve the smiles they’ve always dreamed about. Sometimes just a few
-            minor changes make all the difference. In other cases, you may want to address
-            many teeth. Bring us your concerns, and our doctors can plot the course for
-            your ideal smile.
-          </Subheadline>
+    <>
+      <Head>
+        <title>Cosmetic Dentistry | Services | DentalFix | Savinesti</title>
+        <meta
+          name="description"
+          content="Cosmetic dentistry provides dental services like teeth whitening, porcelain veneers, dental bonding and Invisalign with modern equipment."
+        />
+      </Head>
+      <Page>
+        <Container background="#fff">
+          <LineLength>
+            <Headline size="small" centered className={classes.headline}>
+              Cosmetic dentistry
+            </Headline>
+            <Subheadline light centered>
+              Feeling good when you smile is a true asset. At DentalFix we love helping
+              our patients achieve the smiles they’ve always dreamed about. Sometimes just
+              a few minor changes make all the difference. In other cases, you may want to
+              address many teeth. Bring us your concerns, and our doctors can plot the
+              course for your ideal smile.
+            </Subheadline>
 
-          <hr className={classes.divider} />
+            <hr className={classes.divider} />
 
-          {subcategories.map(({ headline, description, url, img }) => (
-            <div key={url} className={classes.serviceBox}>
-              <div className={classes.imgBox}>
-                {' '}
-                <img className={classes.icon} src={img} alt="" />{' '}
+            {subcategories.map(({ headline, description, url, img }) => (
+              <div key={url} className={classes.serviceBox}>
+                <div className={classes.imgBox}>
+                  {' '}
+                  <img className={classes.icon} src={img} alt="" />{' '}
+                </div>
+                <div className={classes.descriptionBox}>
+                  <Subheadline bold>{headline}</Subheadline>
+                  <BodyText>{description}</BodyText>
+                  <ButtonLink
+                    to={url}
+                    background="primary"
+                    size="large"
+                    className={classes.learnMore}
+                  >
+                    Learn more
+                  </ButtonLink>
+                </div>
               </div>
-              <div className={classes.descriptionBox}>
-                <Subheadline bold>{headline}</Subheadline>
-                <BodyText>{description}</BodyText>
-                <ButtonLink
-                  to={url}
-                  background="primary"
-                  size="large"
-                  className={classes.learnMore}
-                >
-                  Learn more
-                </ButtonLink>
-              </div>
-            </div>
-          ))}
-        </LineLength>
-      </Container>
-    </Page>
+            ))}
+          </LineLength>
+        </Container>
+      </Page>
+    </>
   )
 }
 
