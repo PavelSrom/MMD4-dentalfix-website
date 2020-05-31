@@ -44,9 +44,6 @@ const Documents = () => {
       <BodyText>
         Our mission is to deliver the highest quality care, unprecedented comfort, and
         service.
-      </BodyText>
-      <br />
-      <BodyText>
         We're committed to delivering the very best results for you, whether it is
         creating the perfect smile, reconstructing your entire teeth or helping you
         achieve total wellness.
