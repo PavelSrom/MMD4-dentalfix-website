@@ -15,7 +15,8 @@ export default makeStyles(theme => ({
     //   width: '50%' // optional
     // },
     [theme.breakpoints.down('sm')]: {
-      width: '100%'
+      width: '100%',
+      display: 'none' // hide images on small viewports
     }
   },
   content: {

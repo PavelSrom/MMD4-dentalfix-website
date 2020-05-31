@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import { Page, Container, LineLength } from '../../../templates/layout'
 import { Headline, Subheadline, BodyText } from '../../../templates/text'
 import { ButtonLink } from '../../../templates/button'
@@ -56,40 +57,52 @@ const general = () => {
   ]
 
   return (
-    <Page>
-      <Container background="#fff">
-        <LineLength>
-          <Headline size="small" centered className={classes.headline}>
-            General dentistry
-          </Headline>
-          <Subheadline light centered>
-            Great dental health is the result of early detection and preventive
-            treatments. But it’s never too late to develop a relationship with your dental
-            team and get the care you need!
-          </Subheadline>
+    <>
+      <Head>
+        <title>General Dentistry | Services | DentalFix | Savinesti</title>
+        <meta
+          name="description"
+          content="General dentistry provides dental services like dental crowns, diagnosis, endodontics and bridges with modern equipment."
+        />
+      </Head>
+      <Page>
+        <Container background="#fff">
+          <LineLength>
+            <Headline size="small" centered className={classes.headline}>
+              General dentistry
+            </Headline>
+            <Subheadline light centered>
+              Great dental health is the result of early detection and preventive
+              treatments. But it’s never too late to develop a relationship with your
+              dental team and get the care you need!
+            </Subheadline>
 
-          <hr className={classes.divider} />
+            <hr className={classes.divider} />
 
-          {subcategories.map(({ headline, description, url, img }) => (
-            <div key={url} className={classes.serviceBox}>
-              <div className={classes.imgBox}> <img className={classes.icon} src={img} alt="" /> </div>
-              <div className={classes.descriptionBox}>
-                <Subheadline bold>{headline}</Subheadline>
-                <BodyText>{description}</BodyText>
-                <ButtonLink
-                  to={url}
-                  background="primary"
-                  size="large"
-                  className={classes.learnMore}
-                >
-                  Learn more
-                </ButtonLink>
+            {subcategories.map(({ headline, description, url, img }) => (
+              <div key={url} className={classes.serviceBox}>
+                <div className={classes.imgBox}>
+                  {' '}
+                  <img className={classes.icon} src={img} alt="" />{' '}
+                </div>
+                <div className={classes.descriptionBox}>
+                  <Subheadline bold>{headline}</Subheadline>
+                  <BodyText>{description}</BodyText>
+                  <ButtonLink
+                    to={url}
+                    background="primary"
+                    size="large"
+                    className={classes.learnMore}
+                  >
+                    Learn more
+                  </ButtonLink>
+                </div>
               </div>
-            </div>
-          ))}
-        </LineLength>
-      </Container>
-    </Page>
+            ))}
+          </LineLength>
+        </Container>
+      </Page>
+    </>
   )
 }
 

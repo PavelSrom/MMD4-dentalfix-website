@@ -12,17 +12,15 @@ const Documents = () => {
         Important documents
       </Subheadline>
 
-      <BodyText light>
+      <BodyText>
         The important documents that you need to have on your first visit are:
       </BodyText>
       <br />
       {items.map(item => (
-        <BodyText key={item} light>
-          {item}
-        </BodyText>
+        <BodyText key={item}>{item}</BodyText>
       ))}
       <br />
-      <BodyText light>
+      <BodyText>
         After you first visit at DentalFix Clinic, you can become a patient and register
         into our system by creating an account into our new application.
       </BodyText>

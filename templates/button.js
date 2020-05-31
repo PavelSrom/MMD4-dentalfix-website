@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
     },
     transition: 'background-color 350ms ease-in-out',
     '&:hover': {
-      backgroundColor: '#E28079' // Gary's favorite color <3
+      backgroundColor: '#E28079'
     }
   }
 }))
@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
 const Button = ({ children }) => {
   const classes = useStyles()
 
-  return <button className={classes.button}> {children}</button>
+  return <button className={classes.button}>{children}</button>
 }
 
 export const LinkWrapper = ({ children, style, ...rest }) => (
@@ -53,9 +53,16 @@ export const LinkWrapper = ({ children, style, ...rest }) => (
 
 // DESC:			custom component to navigate between pages
 // USAGE:			whenever you wanna navigate between pages, and PROVIDE THE 'component' PROP !!!
-export const Link = ({ component: Component, to, className, children, ...rest }) => (
+export const Link = ({
+  component: Component,
+  to,
+  className,
+  children,
+  target,
+  ...rest
+}) => (
   <NextLink href={to}>
-    <a style={{ textDecoration: 'none', color: 'inherit' }}>
+    <a style={{ textDecoration: 'none', color: 'inherit' }} target={target}>
       <Component className={className} {...rest}>
         {children}
       </Component>
