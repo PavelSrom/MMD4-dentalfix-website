@@ -7,10 +7,11 @@ import chair from '../../assets/chair-2.jpg'
 const CTA = () => (
   <div
     style={{
-      backgroundImage: `url(${chair})`,
+      // backgroundImage: `url(${chair})`,
       backgroundSize: 'cover',
       backgroundPosition: '50% 50%',
-      position: 'relative'
+      position: 'relative',
+      backgroundColor: '#E0E0E0'
     }}
   >
     <Container>
