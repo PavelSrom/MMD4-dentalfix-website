@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
     },
     transition: 'background-color 350ms ease-in-out',
     '&:hover': {
-      backgroundColor: '#E28079'
+      backgroundColor: '#F58E86'
     }
   }
 }))
